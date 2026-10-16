@@ -294,6 +294,24 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
 .edu h3{font-size:18px;margin:4px 0}
 .edu p{margin:0;color:var(--ink-2)}
 #certs .certs{margin-top:0}
+
+/* projects inside the A97 experience */
+.xp-intro{color:var(--ink-2);margin:0 0 12px;font-size:15px}
+.xp-list{display:grid;gap:10px}
+.xp{border:1px solid var(--line);border-radius:12px;background:var(--bg-2);overflow:hidden}
+.xp summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:13px 16px;font-size:15px;color:var(--ink);transition:background .2s}
+.xp summary::-webkit-details-marker{display:none}
+.xp summary::before{content:"";flex:none;width:8px;height:8px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg);transition:transform .25s}
+.xp[open] summary::before{transform:rotate(45deg)}
+.xp summary span{flex:1;min-width:0}
+.xp summary em{flex:none;font:500 12px "JetBrains Mono",monospace;font-style:normal;color:var(--accent-ink);border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);padding:3px 9px;border-radius:999px}
+.xp[open] summary em{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.xp summary:hover{background:var(--accent-soft)}
+.xp-body{padding:0 12px 12px}
+.xp-body .project{margin:0;box-shadow:none;border-radius:12px}
+.xp[open] .xp-body{animation:xpIn .35s ease}
+@keyframes xpIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media (max-width:600px){.xp summary{padding:12px;gap:10px;font-size:14.5px}.xp summary em{display:none}.xp-body{padding:0 6px 6px}}
 </style>
 </head>
 <body>
@@ -302,12 +320,9 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
   <div class="wrap">
     <a class="brand" href="#top"><span class="dot">OE</span>Omar Einshouka</a>
     <nav id="menu">
-      <a href="#about">About</a>
-      <a href="#accounts">Accounts</a>
       <a href="#awards">Awards</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#certs">Certificates</a>
       <a href="#skills">Skills</a>
       <a href="#writing">Articles</a>
@@ -329,7 +344,7 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
       <p class="role">I'm a <span class="typed" id="typed">Cybersecurity Engineer</span><span class="caret"></span></p>
       <p class="lede">I break things to learn how they work, and I build things that people use every day. I'm a CTF player and penetration tester who also built the full digital ecosystem of a real estate startup: four products for finance, sales and clients.</p>
       <div class="cta">
-        <a class="btn primary" href="#projects">See my work
+        <a class="btn primary" href="#experience">See my work
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn" href="assets/Omar_Einshouka_CV.pdf" download>Download CV</a>
         <a class="btn" href="#contact">Get in touch</a>
@@ -343,42 +358,6 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
       <div><b>400+</b><span>algorithm problems solved</span></div>
       <div><b>500+</b><span>students taught C++</span></div>
       <div><b>3</b><span>CTF &amp; ICPC podium finishes</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// about</p><h2>Security mindset, builder's habits</h2></div></div>
-    <div class="about">
-      <div class="reveal">
-        <p>I'm a cybersecurity engineer who loves offensive security: learning a new technology, then finding the ways it breaks. I play CTFs, practise on Hack The Box, and come from a competitive programming background, which taught me to break any problem into small, clear steps.</p>
-        <p>From October 2025 to September 2026 I was Technical Lead at <b>A97</b>, a real estate startup in Cairo. I built the company's digital ecosystem from scratch: a CRM for sales and marketing, a marketplace for selling leads, a finance tracker, and a property marketplace that I built with a team of three developers. I built all four with security in mind from day one. The CRM went through a full security audit that found and fixed 30 issues, including an account-takeover chain.</p>
-        <p>I like explaining hard ideas simply, and I can turn almost anything into a clear diagram. I want to build things that serve people.</p>
-      </div>
-      <div class="facts reveal">
-        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Nasr City, Cairo, Egypt</b><span>Open to on-site, hybrid and remote roles</span></div></div>
-        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>Offensive security</b><span>Web, API and AWS pentesting, red teaming</span></div></div>
-        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><div><b>Arabic · English · German</b><span>Native · Fluent · Conversational</span></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACCOUNTS -->
-<section id="accounts" class="band">
-  <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// accounts</p><h2>Find me online</h2></div><p>Where I write, practise and compete.</p></div>
-    <div class="acc-grid">
-      <a class="acc reveal" href="https://www.linkedin.com/in/omar-ehab-82a65b195/" target="_blank" rel="noopener"><span class="ai" data-i="linkedin"></span><b>LinkedIn</b><span class="h">omar-ehab-82a65b195</span><span class="d">Career, posts and recommendations</span></a>
-      <a class="acc reveal" href="https://github.com/omarehab2001" target="_blank" rel="noopener"><span class="ai" data-i="github"></span><b>GitHub</b><span class="h">omarehab2001</span><span class="d">Code and projects</span></a>
-      <a class="acc reveal" href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener"><span class="ai" data-i="medium"></span><b>Medium</b><span class="h">@omareinshouka2001</span><span class="d">Articles about what I build</span></a>
-      <a class="acc reveal" href="https://profile.hackthebox.com/profile/01a1334d-3701-704b-9274-9ca1fe883e89?utm_medium=copy_url" target="_blank" rel="noopener"><span class="ai" data-i="hackthebox"></span><b>Hack The Box</b><span class="h">Player profile</span><span class="d">Offensive security practice</span></a>
-      <a class="acc reveal" href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener"><span class="ai" data-i="code"></span><b>Codeforces</b><span class="h">Omar_Ehab</span><span class="d">Competitive programming</span></a>
-      <a class="acc reveal" href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener"><span class="ai" data-i="code"></span><b>VJudge</b><span class="h">omar_zoo</span><span class="d">Contest practice</span></a>
-      <a class="acc reveal" href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener"><span class="ai" data-i="code"></span><b>beecrowd</b><span class="h">Profile 412774</span><span class="d">Problem solving</span></a>
-      <a class="acc reveal" href="mailto:omareinshouka2001@gmail.com"><span class="ai" data-i="email"></span><b>Email</b><span class="h">omareinshouka2001@gmail.com</span><span class="d">The fastest way to reach me</span></a>
     </div>
   </div>
 </section>
@@ -420,62 +399,12 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
       <div class="tl-item reveal"><div class="tl-card">
         <div class="tl-top"><h3>Technical Lead</h3><span class="when">Oct 2025 – Sep 2026</span></div>
         <div class="tl-org">A97 · Real Estate Startup · Cairo</div>
-        <ul>
-          <li>Built the company's full digital ecosystem from scratch, delivering 4 products for finance, sales, and clients.</li>
-          <li>Developed a finance tracker and a web platform for selling real estate leads.</li>
-          <li>Built a CRM for the sales and marketing teams, giving admins full visibility into every action across the company.</li>
-          <li>Led a team of 3 developers to build a property marketplace with interactive map search, unit comparison, and client property listings.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Offensive Security Intern</h3><span class="when">Jul 2024 – Aug 2024</span></div>
-        <div class="tl-org">Zinad IT · Summer Training</div>
-        <ul>
-          <li>Performed web application and API penetration testing, and AWS cloud penetration testing.</li>
-          <li>Built a detailed penetration testing checklist to standardise assessment coverage.</li>
-          <li>Executed red team scenarios with Flipper Zero, Rubber Ducky, deauth attacks, and NFC card hacking.</li>
-          <li>Conducted secure code review, application threat modelling, and vulnerability risk assessment.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Aug 2023 – Sep 2023</span></div>
-        <div class="tl-org"><a href="https://drive.google.com/file/d/1BixXPB75uZ2cvpjKVnuKRYPMkGzCsUqx/view" target="_blank" rel="noopener">WE (Telecom Egypt)</a> · Summer Training</div>
-        <ul>
-          <li>Completed CEH v12 training covering the full ethical hacking methodology.</li>
-          <li>Used a wide range of security tools to handle attack scenarios and wrote technical reports on findings.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Jul 2022 – Aug 2022</span></div>
-        <div class="tl-org"><a href="https://drive.google.com/file/d/1etdc5gPoNEgqf1hYfopfTblsV4rHXrhQ/view" target="_blank" rel="noopener">Information Technology Institute (ITI)</a> · Summer Training</div>
-        <ul>
-          <li>Trained in network fundamentals, Windows Server administration, and Red Hat System Administration I.</li>
-          <li>Configured and managed FortiGate firewall policies.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Competitive Programming Instructor &amp; Project Manager</h3><span class="when">2020 – 2021</span></div>
-        <div class="tl-org">IEEE Student Branch · Problem Solving Team · Menoufia University</div>
-        <ul>
-          <li>Solved 400+ algorithmic problems on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a>, and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a>.</li>
-          <li>Taught problem solving in C++ to 500+ students online and onsite.</li>
-          <li>Managed the IEEE summer camp project that trained students and prepared them for the ICPC competition.</li>
-        </ul>
-      </div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="band">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div><p class="kicker">// projects</p><h2>The A97 digital ecosystem</h2></div>
-      <p>Four products, built from scratch for a real estate startup and used every day by its finance, sales and marketing teams and by its clients.</p>
-    </div>
-
-    <!-- CRM -->
-    <article class="project reveal">
+        <p class="xp-intro">Built the company's full digital ecosystem from scratch, delivering 4 products for finance, sales, and clients. Open each one for the details.</p>
+        <div class="xp-list">
+          <details class="xp">
+            <summary><span>Built a CRM for the sales and marketing teams, giving admins full visibility into every action across the company.</span><em>Details</em></summary>
+            <div class="xp-body">
+<article class="project">
       <div class="media">
         <img src="assets/12-admin-3-agents-on-one-lead.jpg" alt="One lead with three sales agents at three different steps of the pipeline" loading="lazy">
         <img src="assets/10-admin-1-dashboard.jpg" alt="The CRM admin dashboard" loading="lazy">
@@ -502,9 +431,12 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
         <div class="plinks" data-links="crm"></div>
       </div>
     </article>
-
-    <!-- LEAD GENERATOR -->
-    <article class="project flip reveal">
+            </div>
+          </details>
+          <details class="xp">
+            <summary><span>Developed a web platform for selling real estate leads.</span><em>Details</em></summary>
+            <div class="xp-body">
+<article class="project flip">
       <div class="media">
         <div class="mock">
           <div class="mbar"><i></i><i></i><i></i>&nbsp;browse leads · 200 pts</div>
@@ -541,9 +473,12 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
         <div class="stack"><span>Node.js</span><span>Express</span><span>SQLite</span><span>JWT + bcrypt</span><span>CSV import / Excel export</span><span>Docker</span></div>
       </div>
     </article>
-
-    <!-- FINANCE TRACKER -->
-    <article class="project reveal">
+            </div>
+          </details>
+          <details class="xp">
+            <summary><span>Developed a finance tracker for the company's income, expenses and debts.</span><em>Details</em></summary>
+            <div class="xp-body">
+<article class="project">
       <div class="media">
         <div class="mock">
           <div class="mbar"><i></i><i></i><i></i>&nbsp;A97 Finance Tracker · This month</div>
@@ -582,9 +517,12 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
         <div class="stack"><span>Node.js</span><span>Express</span><span>MongoDB Atlas</span><span>Chart.js</span><span>JWT + bcrypt</span></div>
       </div>
     </article>
-
-    <!-- A97 INFINITY -->
-    <article class="project flip reveal">
+            </div>
+          </details>
+          <details class="xp">
+            <summary><span>Led a team of 3 developers to build a property marketplace with interactive map search, unit comparison, and client property listings.</span><em>Details</em></summary>
+            <div class="xp-body">
+<article class="project flip">
       <div class="media">
         <div class="mock">
           <div class="mbar"><i></i><i></i><i></i>&nbsp;a97homes.com · map search</div>
@@ -637,11 +575,51 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
         <div class="plinks" data-links="infinity"></div>
       </div>
     </article>
+            </div>
+          </details>
+        </div>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Offensive Security Intern</h3><span class="when">Jul 2024 – Aug 2024</span></div>
+        <div class="tl-org">Zinad IT · Summer Training</div>
+        <ul>
+          <li>Performed web application and API penetration testing, and AWS cloud penetration testing.</li>
+          <li>Built a detailed penetration testing checklist to standardise assessment coverage.</li>
+          <li>Executed red team scenarios with Flipper Zero, Rubber Ducky, deauth attacks, and NFC card hacking.</li>
+          <li>Conducted secure code review, application threat modelling, and vulnerability risk assessment.</li>
+        </ul>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Aug 2023 – Sep 2023</span></div>
+        <div class="tl-org"><a href="https://drive.google.com/file/d/1BixXPB75uZ2cvpjKVnuKRYPMkGzCsUqx/view" target="_blank" rel="noopener">WE (Telecom Egypt)</a> · Summer Training</div>
+        <ul>
+          <li>Completed CEH v12 training covering the full ethical hacking methodology.</li>
+          <li>Used a wide range of security tools to handle attack scenarios and wrote technical reports on findings.</li>
+        </ul>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Jul 2022 – Aug 2022</span></div>
+        <div class="tl-org"><a href="https://drive.google.com/file/d/1etdc5gPoNEgqf1hYfopfTblsV4rHXrhQ/view" target="_blank" rel="noopener">Information Technology Institute (ITI)</a> · Summer Training</div>
+        <ul>
+          <li>Trained in network fundamentals, Windows Server administration, and Red Hat System Administration I.</li>
+          <li>Configured and managed FortiGate firewall policies.</li>
+        </ul>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Competitive Programming Instructor &amp; Project Manager</h3><span class="when">2020 – 2021</span></div>
+        <div class="tl-org">IEEE Student Branch · Problem Solving Team · Menoufia University</div>
+        <ul>
+          <li>Solved 400+ algorithmic problems on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a>, and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a>.</li>
+          <li>Taught problem solving in C++ to 500+ students online and onsite.</li>
+          <li>Managed the IEEE summer camp project that trained students and prepared them for the ICPC competition.</li>
+        </ul>
+      </div></div>
+    </div>
   </div>
 </section>
 
 <!-- CERTIFICATES -->
-<section id="certs">
+<section id="certs" class="band">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">// credentials</p><h2>Credentials and certificates</h2></div><p>Select a course to open its certificate.</p></div>
     <div class="certs">
@@ -677,7 +655,7 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="band">
+<section id="skills">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">// skills</p><h2>What I work with</h2></div></div>
     <div class="skills">
@@ -694,7 +672,7 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
 </section>
 
 <!-- WRITING -->
-<section id="writing">
+<section id="writing" class="band">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">// articles</p><h2>Articles</h2></div><p>I write about the things I build: how they work, and why they're built that way.</p></div>
     <article class="article reveal">

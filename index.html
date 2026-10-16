@@ -19,19 +19,20 @@
 <style>
 :root{
   color-scheme: dark;
-  --bg:#04060c; --bg-2:#070b16; --surface:#0b1222; --surface-2:#0f1830; --line:#152039; --line-2:#20305a;
+  --bg:#03050a; --bg-2:#050912; --surface:#08101f; --surface-2:#0b1529; --line:#111c33; --line-2:#1a2a50;
   --ink:#eaf0fc; --ink-2:#b7c3dd; --muted:#8392b0;
-  --accent:#3b82f6; --accent-ink:#7fb4ff; --accent-soft:rgba(59,130,246,.13);
+  --accent:#1d4ed8; --accent-ink:#6f9bff; --accent-soft:rgba(29,78,216,.16); --red:#e5484d;
   --sky:#38bdf8; --cyan:#22d3ee; --indigo:#6366f1; --navy:#1e3a8a; --gold:#60a5fa;
-  --grad:linear-gradient(120deg,#2563eb 0%,#3b82f6 45%,#22d3ee 100%);
-  --glow:0 10px 34px -12px rgba(59,130,246,.65);
+  --grad:linear-gradient(120deg,#1e3a8a 0%,#1d4ed8 50%,#0369a1 100%);
+  --grad-text:linear-gradient(120deg,#4d7cff 0%,#3b6ef0 45%,#2c9be0 100%);
+  --glow:0 10px 34px -12px rgba(29,78,216,.75);
   --shadow:0 1px 2px rgba(0,0,0,.4),0 14px 36px rgba(0,0,0,.45);
   --ease-out:cubic-bezier(.23,1,.32,1);
   --radius:14px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:radial-gradient(1100px 620px at 88% -8%,rgba(37,99,235,.22),transparent 62%),radial-gradient(900px 560px at -12% 28%,rgba(34,211,238,.08),transparent 60%),radial-gradient(800px 600px at 50% 120%,rgba(99,102,241,.12),transparent 60%),var(--bg);background-attachment:fixed;color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:radial-gradient(1100px 620px at 88% -8%,rgba(30,58,138,.38),transparent 62%),radial-gradient(900px 560px at -12% 28%,rgba(3,105,161,.08),transparent 60%),radial-gradient(800px 600px at 50% 120%,rgba(49,46,129,.12),transparent 60%),var(--bg);background-attachment:fixed;color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 img{max-width:100%;display:block}
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
@@ -58,8 +59,8 @@ header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--b
 /* hero */
 .hero{padding:96px 0 64px;position:relative;overflow:hidden;isolation:isolate}
 .hero > .wrap{z-index:1}
-.hero::before{content:"";position:absolute;width:620px;height:620px;right:-120px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.28),rgba(34,211,238,.10) 45%,transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 18s ease-in-out infinite alternate}
-.hero::after{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-120px;border-radius:50%;background:radial-gradient(circle,rgba(99,102,241,.22),transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 22s ease-in-out infinite alternate-reverse}
+.hero::before{content:"";position:absolute;width:620px;height:620px;right:-120px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(29,78,216,.28),rgba(3,105,161,.10) 45%,transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-120px;border-radius:50%;background:radial-gradient(circle,rgba(49,46,129,.22),transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 22s ease-in-out infinite alternate-reverse}
 @keyframes aurora{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-60px,40px) scale(1.12)}100%{transform:translate(30px,80px) scale(.95)}}
 .hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:48px;align-items:center}
 .hero .lede{max-width:640px}
@@ -67,10 +68,10 @@ header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--b
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font:500 13px "JetBrains Mono",monospace;color:var(--accent-ink);background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);padding:6px 12px;border-radius:999px}
 .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
 h1{font-size:clamp(40px,6vw,64px);line-height:1.04;letter-spacing:-.035em;margin:20px 0 14px;font-weight:800}
-h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 span{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
 .role{font-size:clamp(18px,2.2vw,22px);color:var(--ink-2);font-weight:500;margin:0 0 18px}
 .role .typed{font-family:"JetBrains Mono",monospace;color:var(--ink);font-weight:500}
-.role .caret{display:inline-block;width:2px;height:1.05em;background:var(--accent);vertical-align:-3px;margin-left:2px;animation:blink 1s steps(1) infinite}
+.role .caret{display:inline-block;width:2px;height:1.05em;background:var(--red);vertical-align:-3px;margin-left:2px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
 .lede{color:var(--ink-2);max-width:580px;margin:0 0 28px;font-size:17px}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
@@ -82,7 +83,7 @@ h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text
 .btn svg{width:17px;height:17px}
 .socials{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
 .socials a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:13.5px;font-weight:500;color:var(--ink-2);padding:8px 14px 8px 10px;min-height:40px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--surface) 85%,transparent);transition:transform .2s var(--ease-out),border-color .2s ease,color .2s ease,box-shadow .25s ease}
-.socials a:hover{color:var(--ink);border-color:var(--line-2);transform:translateY(-2px);box-shadow:0 8px 22px -12px rgba(59,130,246,.6)}
+.socials a:hover{color:var(--ink);border-color:var(--line-2);transform:translateY(-2px);box-shadow:0 8px 22px -12px rgba(29,78,216,.6)}
 .socials a:active{transform:scale(.97)}
 .socials svg{width:18px;height:18px;flex:none}
 
@@ -91,7 +92,7 @@ h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:8px}
 .stats div{background:var(--surface);padding:22px 20px}
-.stats b{display:block;font-size:32px;letter-spacing:-.03em;line-height:1.1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.stats b{display:block;font-size:32px;letter-spacing:-.03em;line-height:1.1;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
 .stats span{color:var(--muted);font-size:13.5px}
 @media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
 
@@ -190,7 +191,7 @@ h3{letter-spacing:-.02em;margin:0}
 .tl{position:relative;display:grid;gap:18px}
 .tl::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--cyan) 50%,var(--line))}
 .tl-item{position:relative;padding-left:44px}
-.tl-item::before{content:"";position:absolute;left:4px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 0 5px rgba(59,130,246,.14)}
+.tl-item::before{content:"";position:absolute;left:4px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);box-shadow:0 0 0 5px rgba(29,78,216,.14)}
 .tl-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:20px 22px}
 .tl-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
 .tl-top h3{font-size:18px}
@@ -206,7 +207,7 @@ h3{letter-spacing:-.02em;margin:0}
 .award{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:22px;text-decoration:none;display:block;transition:border-color .15s,transform .15s}
 .award:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--glow)}
 .award{transition:border-color .2s ease,transform .25s var(--ease-out),box-shadow .25s ease}
-.award .place{font-size:44px;font-weight:800;letter-spacing:-.04em;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.award .place{font-size:44px;font-weight:800;letter-spacing:-.04em;line-height:1;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
 .award .place sup{font-size:16px;letter-spacing:0}
 .award b{display:block;margin:12px 0 4px}
 .award span{color:var(--muted);font-size:14px}
@@ -218,7 +219,7 @@ h3{letter-spacing:-.02em;margin:0}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chips a,.chips span{font-size:13px;padding:5px 10px;border:1px solid var(--line);border-radius:8px;text-decoration:none;color:var(--ink-2);background:var(--bg-2)}
 .chips a:hover{border-color:var(--accent);color:var(--accent-ink)}
-.cert.feature{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));background:linear-gradient(135deg,rgba(59,130,246,.18),rgba(34,211,238,.05) 60%),var(--surface)}
+.cert.feature{border-color:color-mix(in srgb,var(--accent) 55%,var(--line));background:linear-gradient(135deg,rgba(29,78,216,.18),rgba(3,105,161,.05) 60%),var(--surface)}
 
 /* skills */
 .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -241,7 +242,7 @@ h3{letter-spacing:-.02em;margin:0}
 
 /* contact */
 .contact{border:1px solid var(--line-2);border-radius:22px;background:linear-gradient(160deg,#0a1630,#050914 70%);color:#e8edf5;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 30% 30%,rgba(59,130,246,.35),transparent 45%),radial-gradient(circle at 75% 70%,rgba(34,211,238,.18),transparent 45%);animation:aurora 20s ease-in-out infinite alternate}
+.contact::before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 30% 30%,rgba(29,78,216,.35),transparent 45%),radial-gradient(circle at 75% 70%,rgba(3,105,161,.18),transparent 45%);animation:aurora 20s ease-in-out infinite alternate}
 .contact > *{position:relative}
 .contact h2{color:#fff}
 .contact p{opacity:.75;max-width:520px;margin:12px auto 26px}
@@ -276,7 +277,7 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
 .cp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 @media (max-width:860px){.cp{grid-template-columns:minmax(0,1fr)}}
 .cp-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:20px 22px;color:var(--ink-2);font-size:15px}
-.cp-card .num{display:inline-block;font-size:32px;font-weight:800;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1;margin-bottom:6px}
+.cp-card .num{display:block;width:fit-content;font-size:32px;font-weight:800;letter-spacing:-.03em;background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1;margin-bottom:6px}
 .cp-card a{color:var(--ink);text-decoration-color:color-mix(in srgb,var(--accent) 50%,transparent);text-underline-offset:3px}
 .edu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 @media (max-width:760px){.edu-grid{grid-template-columns:minmax(0,1fr)}}
@@ -320,9 +321,9 @@ header.nav{position:sticky}
 .totop:active{transform:scale(.94)}
 .totop svg{width:20px;height:20px}
 .tl-card,.cert,.skill,.cp-card,.edu,.xp{transition:border-color .25s ease,transform .3s var(--ease-out),box-shadow .3s ease}
-.tl-card:hover,.cert:hover,.skill:hover,.cp-card:hover,.edu:hover{border-color:var(--line-2);box-shadow:0 18px 40px -24px rgba(59,130,246,.55)}
+.tl-card:hover,.cert:hover,.skill:hover,.cp-card:hover,.edu:hover{border-color:var(--line-2);box-shadow:0 18px 40px -24px rgba(29,78,216,.55)}
 .skill h3 svg,.edu-ic svg{color:var(--accent-ink)}
-.edu-ic{background:linear-gradient(135deg,rgba(59,130,246,.22),rgba(34,211,238,.10))}
+.edu-ic{background:linear-gradient(135deg,rgba(29,78,216,.22),rgba(3,105,161,.10))}
 .chips a{transition:border-color .2s ease,color .2s ease,transform .2s var(--ease-out)}
 .chips a:hover{transform:translateY(-1px)}
 .kicker{color:var(--accent-ink)}
@@ -333,6 +334,8 @@ header.nav{position:sticky}
 .reveal{opacity:1;transform:none;transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
 .reveal.pre{opacity:0;transform:translateY(18px)}
 @media (prefers-reduced-motion:reduce){.hero::before,.hero::after,.contact::before{animation:none}.reveal.pre{opacity:1;transform:none}.totop{transition:none}}
+.kicker .sl{color:var(--red)}
+.contact .kicker{color:#9db8ff}
 </style>
 </head>
 <body>
@@ -386,7 +389,7 @@ header.nav{position:sticky}
 <!-- AWARDS + CP -->
 <section id="awards">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// awards &amp; achievements</p><h2>Competitions and competitive programming</h2></div></div>
+    <div class="sec-head reveal"><div><p class="kicker"><span class="sl">//</span> awards &amp; achievements</p><h2>Competitions and competitive programming</h2></div></div>
     <div class="grid3">
       <a class="award reveal" href="https://www.linkedin.com/posts/omar-ehab-einshouka-82a65b195_cybersecurity-egypt-pentesting-activity-7172757532589985792-3PzE" target="_blank" rel="noopener"><div class="place">3<sup>rd</sup></div><b>Cyber Champions CTF</b><span>Organised by Zinad IT &amp; ITI</span></a>
       <a class="award reveal" href="https://drive.google.com/file/d/1sFyQ6HwcITICQIUX1EIGHNoRpF62ttEi/view" target="_blank" rel="noopener"><div class="place">7<sup>th</sup></div><b>ICMTC CTF Finals</b><span>Capture the Flag finals</span></a>
@@ -404,7 +407,7 @@ header.nav{position:sticky}
 <!-- EDUCATION -->
 <section id="education" class="band">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// education &amp; service</p><h2>Education and military service</h2></div></div>
+    <div class="sec-head reveal"><div><p class="kicker"><span class="sl">//</span> education &amp; service</p><h2>Education and military service</h2></div></div>
     <div class="edu-grid">
       <div class="edu reveal"><div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><div><span class="when">Sep 2019 – Jul 2024</span><h3>B.Sc. in Cybersecurity &amp; Data Analytics</h3><p>Faculty of Electronic Engineering, Menoufia University</p></div></div>
       <div class="edu reveal"><div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div><span class="when">Completed</span><h3>Military service</h3><p>Egyptian military service, fully completed</p></div></div>
@@ -415,7 +418,7 @@ header.nav{position:sticky}
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// experience</p><h2>Where I've worked and trained</h2></div></div>
+    <div class="sec-head reveal"><div><p class="kicker"><span class="sl">//</span> experience</p><h2>Where I've worked and trained</h2></div></div>
     <div class="tl">
       <div class="tl-item reveal"><div class="tl-card">
         <div class="tl-top"><h3>Technical Lead</h3><span class="when">Oct 2025 – Sep 2026</span></div>
@@ -642,7 +645,7 @@ header.nav{position:sticky}
 <!-- CERTIFICATES -->
 <section id="certs" class="band">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// credentials</p><h2>Credentials and certificates</h2></div><p>Select a course to open its certificate.</p></div>
+    <div class="sec-head reveal"><div><p class="kicker"><span class="sl">//</span> credentials</p><h2>Credentials and certificates</h2></div><p>Select a course to open its certificate.</p></div>
     <div class="certs">
       <div class="cert feature reveal">
         <h3>EC-Council Certified Incident Handler (ECIH)</h3>
@@ -678,7 +681,7 @@ header.nav{position:sticky}
 <!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// skills</p><h2>What I work with</h2></div></div>
+    <div class="sec-head reveal"><div><p class="kicker"><span class="sl">//</span> skills</p><h2>What I work with</h2></div></div>
     <div class="skills">
       <div class="skill reveal"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security</h3>
         <div class="chips"><span>Web &amp; API pentesting</span><span>AWS cloud pentesting</span><span>Vulnerability assessment</span><span>Exploitation</span><span>SQL injection</span><span>XSS</span><span>CVSS scoring</span><span>Red teaming</span><span>OSINT</span><span>Threat modelling</span><span>Secure code review</span><span>Incident handling</span><span>SIEM</span><span>Cryptography</span></div></div>
@@ -695,7 +698,7 @@ header.nav{position:sticky}
 <!-- WRITING -->
 <section id="writing" class="band">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// articles</p><h2>Articles</h2></div><p>I write about the things I build: how they work, and why they're built that way.</p></div>
+    <div class="sec-head reveal"><div><p class="kicker"><span class="sl">//</span> articles</p><h2>Articles</h2></div><p>I write about the things I build: how they work, and why they're built that way.</p></div>
     <article class="article reveal">
       <div class="img"><img src="assets/01b-the-pipeline-feedback.jpg" alt="The CRM's eleven-step pipeline feedback" loading="lazy"></div>
       <div class="txt">
@@ -713,7 +716,7 @@ header.nav{position:sticky}
 <section id="contact">
   <div class="wrap">
     <div class="contact reveal">
-      <p class="kicker" style="color:#5fd8d9">// contact</p>
+      <p class="kicker"><span class="sl">//</span> contact</p>
       <h2>Let's build something secure.</h2>
       <p>I'm open to roles in offensive security, penetration testing, and security-minded engineering. The best way to reach me is email or LinkedIn.</p>
       <div class="cta" style="justify-content:center" id="contactLinks"></div>

@@ -53,15 +53,15 @@ img{max-width:100%;display:block}
 /* nav */
 header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;gap:20px;height:64px}
-.brand{font-weight:800;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.brand{font-weight:800;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px;white-space:nowrap;flex:none}
 .brand .dot{width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:600 13px "JetBrains Mono",monospace}
 .nav nav{margin-left:auto;display:flex;gap:4px}
-.nav nav a{text-decoration:none;color:var(--ink-2);font-size:14px;font-weight:500;padding:8px 12px;border-radius:8px}
+.nav nav a{text-decoration:none;color:var(--ink-2);font-size:13.5px;font-weight:500;padding:8px 10px;border-radius:8px;white-space:nowrap}
 .nav nav a:hover{background:var(--accent-soft);color:var(--accent-ink)}
 .icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:38px;height:38px;border-radius:10px;display:grid;place-items:center;cursor:pointer}
 .icon-btn svg{width:18px;height:18px}
 .menu-btn{display:none}
-@media (max-width:860px){
+@media (max-width:1180px){
   .nav nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg-2);border-bottom:1px solid var(--line);padding:8px 16px 16px}
   .nav nav.open{display:flex}
   .menu-btn{display:grid;margin-left:auto}
@@ -71,7 +71,8 @@ header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--b
 /* hero */
 .hero{padding:88px 0 64px;position:relative}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 10%,transparent 70%);opacity:.55;pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:center}
+.hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:48px;align-items:center}
+.hero .lede{max-width:640px}
 @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero{padding:56px 0 40px}}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font:500 13px "JetBrains Mono",monospace;color:var(--accent-ink);background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);padding:6px 12px;border-radius:999px}
 .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
@@ -93,13 +94,6 @@ h1 span{color:var(--accent)}
 .socials svg{width:15px;height:15px}
 
 /* terminal card */
-.term{background:#0b1220;color:#cfe3f2;border-radius:var(--radius);border:1px solid #1e2a3d;box-shadow:var(--shadow);overflow:hidden;font:13.5px/1.7 "JetBrains Mono",monospace}
-.term .bar{display:flex;gap:7px;padding:12px 14px;border-bottom:1px solid #1a2536;background:#0e1728}
-.term .bar i{width:11px;height:11px;border-radius:50%;background:#2a3750}
-.term .bar i:nth-child(1){background:#ff5f57}.term .bar i:nth-child(2){background:#febc2e}.term .bar i:nth-child(3){background:#28c840}
-.term .bar span{margin-left:8px;color:#6f819c;font-size:12px}
-.term pre{margin:0;padding:18px 20px;white-space:pre-wrap;word-break:break-word}
-.term .p{color:#2ec4c6}.term .k{color:#e0b75a}.term .c{color:#6f819c}.term .s{color:#9fe0a6}
 
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:8px}
@@ -271,6 +265,35 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.role .caret{animation:none}}
+
+/* bands, new sections */
+section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.acc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:980px){.acc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.acc{padding:14px}.acc .d{display:none}}
+@media (max-width:330px){.acc-grid{grid-template-columns:minmax(0,1fr)}}
+.acc{display:flex;flex-direction:column;gap:2px;padding:18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);text-decoration:none;min-width:0;transition:border-color .2s,transform .2s,box-shadow .2s}
+.acc:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow)}
+.acc .ai{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink);margin-bottom:10px}
+.acc .ai svg{width:19px;height:19px}
+.acc b{font-size:16px}
+.acc .h{font:500 12.5px "JetBrains Mono",monospace;color:var(--accent-ink);overflow-wrap:anywhere}
+.acc .d{color:var(--muted);font-size:13.5px;margin-top:6px}
+.sub-h{font-size:18px;margin:36px 0 14px}
+.cp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:860px){.cp{grid-template-columns:minmax(0,1fr)}}
+.cp-card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:20px 22px;color:var(--ink-2);font-size:15px}
+.cp-card .num{display:block;font-size:30px;font-weight:800;letter-spacing:-.03em;color:var(--accent);line-height:1.1;margin-bottom:6px}
+.cp-card a{color:var(--ink);text-decoration-color:color-mix(in srgb,var(--accent) 50%,transparent);text-underline-offset:3px}
+.edu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.edu-grid{grid-template-columns:minmax(0,1fr)}}
+.edu{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:22px}
+.edu-ic{width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink)}
+.edu-ic svg{width:22px;height:22px}
+.edu .when{font:500 13px "JetBrains Mono",monospace;color:var(--muted)}
+.edu h3{font-size:18px;margin:4px 0}
+.edu p{margin:0;color:var(--ink-2)}
+#certs .certs{margin-top:0}
 </style>
 </head>
 <body>
@@ -280,11 +303,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <a class="brand" href="#top"><span class="dot">OE</span>Omar Einshouka</a>
     <nav id="menu">
       <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
+      <a href="#accounts">Accounts</a>
       <a href="#awards">Awards</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certs">Certificates</a>
       <a href="#skills">Skills</a>
-      <a href="#writing">Writing</a>
+      <a href="#writing">Articles</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
@@ -310,22 +336,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
       </div>
       <div class="socials" id="socials"></div>
     </div>
-    <div class="term" aria-hidden="true">
-      <div class="bar"><i></i><i></i><i></i><span>omar@kali: ~</span></div>
-<pre><span class="p">┌──(omar㉿kali)-[~]</span>
-<span class="p">└─$</span> whoami
-<span class="s">cybersecurity engineer · technical lead</span>
-
-<span class="p">└─$</span> cat focus.txt
-<span class="k">offense</span>  web · API · AWS pentesting, red teaming
-<span class="k">build  </span>  CRM · lead marketplace · finance · web
-<span class="k">play   </span>  Hack The Box, CTFs, 400+ problems solved
-
-<span class="p">└─$</span> ./achievements --top 3
-<span class="c">#3</span>  Cyber Champions CTF   <span class="c">Zinad IT × ITI</span>
-<span class="c">#7</span>  ICMTC CTF Finals
-<span class="c">#9</span>  Menoufia ICPC Contest</pre>
-    </div>
   </div>
   <div class="wrap" style="margin-top:48px">
     <div class="stats reveal">
@@ -348,17 +358,116 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
         <p>I like explaining hard ideas simply, and I can turn almost anything into a clear diagram. I want to build things that serve people.</p>
       </div>
       <div class="facts reveal">
-        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><div><b>B.Sc. Cybersecurity &amp; Data Analytics</b><span>Faculty of Electronic Engineering, Menoufia University · 2019–2024</span></div></div>
-        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>EC-Council Certified Incident Handler</b><span>ECIH · Sep 2024 · ID ECC3972615408</span></div></div>
+        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Nasr City, Cairo, Egypt</b><span>Open to on-site, hybrid and remote roles</span></div></div>
+        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><b>Offensive security</b><span>Web, API and AWS pentesting, red teaming</span></div></div>
         <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><div><b>Arabic · English · German</b><span>Native · Fluent · Conversational</span></div></div>
-        <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><b>Military service completed</b><span>Based in Nasr City, Cairo</span></div></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ACCOUNTS -->
+<section id="accounts" class="band">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><p class="kicker">// accounts</p><h2>Find me online</h2></div><p>Where I write, practise and compete.</p></div>
+    <div class="acc-grid">
+      <a class="acc reveal" href="https://www.linkedin.com/in/omar-ehab-82a65b195/" target="_blank" rel="noopener"><span class="ai" data-i="linkedin"></span><b>LinkedIn</b><span class="h">omar-ehab-82a65b195</span><span class="d">Career, posts and recommendations</span></a>
+      <a class="acc reveal" href="https://github.com/omarehab2001" target="_blank" rel="noopener"><span class="ai" data-i="github"></span><b>GitHub</b><span class="h">omarehab2001</span><span class="d">Code and projects</span></a>
+      <a class="acc reveal" href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener"><span class="ai" data-i="medium"></span><b>Medium</b><span class="h">@omareinshouka2001</span><span class="d">Articles about what I build</span></a>
+      <a class="acc reveal" href="https://profile.hackthebox.com/profile/01a1334d-3701-704b-9274-9ca1fe883e89?utm_medium=copy_url" target="_blank" rel="noopener"><span class="ai" data-i="hackthebox"></span><b>Hack The Box</b><span class="h">Player profile</span><span class="d">Offensive security practice</span></a>
+      <a class="acc reveal" href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener"><span class="ai" data-i="code"></span><b>Codeforces</b><span class="h">Omar_Ehab</span><span class="d">Competitive programming</span></a>
+      <a class="acc reveal" href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener"><span class="ai" data-i="code"></span><b>VJudge</b><span class="h">omar_zoo</span><span class="d">Contest practice</span></a>
+      <a class="acc reveal" href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener"><span class="ai" data-i="code"></span><b>beecrowd</b><span class="h">Profile 412774</span><span class="d">Problem solving</span></a>
+      <a class="acc reveal" href="mailto:omareinshouka2001@gmail.com"><span class="ai" data-i="email"></span><b>Email</b><span class="h">omareinshouka2001@gmail.com</span><span class="d">The fastest way to reach me</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS + CP -->
+<section id="awards">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><p class="kicker">// awards &amp; achievements</p><h2>Competitions and competitive programming</h2></div></div>
+    <div class="grid3">
+      <a class="award reveal" href="https://www.linkedin.com/posts/omar-ehab-einshouka-82a65b195_cybersecurity-egypt-pentesting-activity-7172757532589985792-3PzE" target="_blank" rel="noopener"><div class="place">3<sup>rd</sup></div><b>Cyber Champions CTF</b><span>Organised by Zinad IT &amp; ITI</span></a>
+      <a class="award reveal" href="https://drive.google.com/file/d/1sFyQ6HwcITICQIUX1EIGHNoRpF62ttEi/view" target="_blank" rel="noopener"><div class="place">7<sup>th</sup></div><b>ICMTC CTF Finals</b><span>Capture the Flag finals</span></a>
+      <a class="award reveal" href="https://drive.google.com/file/d/1W6qz6h4YaBPFhdfn_B1UsZ8LJWdI_4R6/view" target="_blank" rel="noopener"><div class="place">9<sup>th</sup></div><b>Menoufia University Collegiate Programming Contest</b><span>ICPC</span></a>
+    </div>
+    <h3 class="sub-h reveal">Competitive programming</h3>
+    <div class="cp">
+      <div class="cp-card reveal"><b class="num">400+</b><span>algorithm problems solved on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a> and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a></span></div>
+      <div class="cp-card reveal"><b class="num">500+</b><span>students taught problem solving in C++, online and onsite, with the IEEE Student Branch</span></div>
+      <div class="cp-card reveal"><b class="num">ICPC</b><span>Managed the IEEE summer camp that trained students and prepared them for the ICPC competition</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="band">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><p class="kicker">// education &amp; service</p><h2>Education and military service</h2></div></div>
+    <div class="edu-grid">
+      <div class="edu reveal"><div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><div><span class="when">Sep 2019 – Jul 2024</span><h3>B.Sc. in Cybersecurity &amp; Data Analytics</h3><p>Faculty of Electronic Engineering, Menoufia University</p></div></div>
+      <div class="edu reveal"><div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div><span class="when">Completed</span><h3>Military service</h3><p>Egyptian military service, fully completed</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><p class="kicker">// experience</p><h2>Where I've worked and trained</h2></div></div>
+    <div class="tl">
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Technical Lead</h3><span class="when">Oct 2025 – Sep 2026</span></div>
+        <div class="tl-org">A97 · Real Estate Startup · Cairo</div>
+        <ul>
+          <li>Built the company's full digital ecosystem from scratch, delivering 4 products for finance, sales, and clients.</li>
+          <li>Developed a finance tracker and a web platform for selling real estate leads.</li>
+          <li>Built a CRM for the sales and marketing teams, giving admins full visibility into every action across the company.</li>
+          <li>Led a team of 3 developers to build a property marketplace with interactive map search, unit comparison, and client property listings.</li>
+        </ul>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Offensive Security Intern</h3><span class="when">Jul 2024 – Aug 2024</span></div>
+        <div class="tl-org">Zinad IT · Summer Training</div>
+        <ul>
+          <li>Performed web application and API penetration testing, and AWS cloud penetration testing.</li>
+          <li>Built a detailed penetration testing checklist to standardise assessment coverage.</li>
+          <li>Executed red team scenarios with Flipper Zero, Rubber Ducky, deauth attacks, and NFC card hacking.</li>
+          <li>Conducted secure code review, application threat modelling, and vulnerability risk assessment.</li>
+        </ul>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Aug 2023 – Sep 2023</span></div>
+        <div class="tl-org"><a href="https://drive.google.com/file/d/1BixXPB75uZ2cvpjKVnuKRYPMkGzCsUqx/view" target="_blank" rel="noopener">WE (Telecom Egypt)</a> · Summer Training</div>
+        <ul>
+          <li>Completed CEH v12 training covering the full ethical hacking methodology.</li>
+          <li>Used a wide range of security tools to handle attack scenarios and wrote technical reports on findings.</li>
+        </ul>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Jul 2022 – Aug 2022</span></div>
+        <div class="tl-org"><a href="https://drive.google.com/file/d/1etdc5gPoNEgqf1hYfopfTblsV4rHXrhQ/view" target="_blank" rel="noopener">Information Technology Institute (ITI)</a> · Summer Training</div>
+        <ul>
+          <li>Trained in network fundamentals, Windows Server administration, and Red Hat System Administration I.</li>
+          <li>Configured and managed FortiGate firewall policies.</li>
+        </ul>
+      </div></div>
+      <div class="tl-item reveal"><div class="tl-card">
+        <div class="tl-top"><h3>Competitive Programming Instructor &amp; Project Manager</h3><span class="when">2020 – 2021</span></div>
+        <div class="tl-org">IEEE Student Branch · Problem Solving Team · Menoufia University</div>
+        <ul>
+          <li>Solved 400+ algorithmic problems on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a>, and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a>.</li>
+          <li>Taught problem solving in C++ to 500+ students online and onsite.</li>
+          <li>Managed the IEEE summer camp project that trained students and prepared them for the ICPC competition.</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</section>
+
 <!-- PROJECTS -->
-<section id="projects" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="projects" class="band">
   <div class="wrap">
     <div class="sec-head reveal">
       <div><p class="kicker">// projects</p><h2>The A97 digital ecosystem</h2></div>
@@ -531,69 +640,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
+<!-- CERTIFICATES -->
+<section id="certs">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// experience</p><h2>Where I've worked and trained</h2></div></div>
-    <div class="tl">
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Technical Lead</h3><span class="when">Oct 2025 – Sep 2026</span></div>
-        <div class="tl-org">A97 · Real Estate Startup · Cairo</div>
-        <ul>
-          <li>Built the company's full digital ecosystem from scratch, delivering 4 products for finance, sales, and clients.</li>
-          <li>Developed a finance tracker and a web platform for selling real estate leads.</li>
-          <li>Built a CRM for the sales and marketing teams, giving admins full visibility into every action across the company.</li>
-          <li>Led a team of 3 developers to build a property marketplace with interactive map search, unit comparison, and client property listings.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Offensive Security Intern</h3><span class="when">Jul 2024 – Aug 2024</span></div>
-        <div class="tl-org">Zinad IT · Summer Training</div>
-        <ul>
-          <li>Performed web application and API penetration testing, and AWS cloud penetration testing.</li>
-          <li>Built a detailed penetration testing checklist to standardise assessment coverage.</li>
-          <li>Executed red team scenarios with Flipper Zero, Rubber Ducky, deauth attacks, and NFC card hacking.</li>
-          <li>Conducted secure code review, application threat modelling, and vulnerability risk assessment.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Aug 2023 – Sep 2023</span></div>
-        <div class="tl-org"><a href="https://drive.google.com/file/d/1BixXPB75uZ2cvpjKVnuKRYPMkGzCsUqx/view" target="_blank" rel="noopener">WE (Telecom Egypt)</a> · Summer Training</div>
-        <ul>
-          <li>Completed CEH v12 training covering the full ethical hacking methodology.</li>
-          <li>Used a wide range of security tools to handle attack scenarios and wrote technical reports on findings.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Cybersecurity Trainee</h3><span class="when">Jul 2022 – Aug 2022</span></div>
-        <div class="tl-org"><a href="https://drive.google.com/file/d/1etdc5gPoNEgqf1hYfopfTblsV4rHXrhQ/view" target="_blank" rel="noopener">Information Technology Institute (ITI)</a> · Summer Training</div>
-        <ul>
-          <li>Trained in network fundamentals, Windows Server administration, and Red Hat System Administration I.</li>
-          <li>Configured and managed FortiGate firewall policies.</li>
-        </ul>
-      </div></div>
-      <div class="tl-item reveal"><div class="tl-card">
-        <div class="tl-top"><h3>Competitive Programming Instructor &amp; Project Manager</h3><span class="when">2020 – 2021</span></div>
-        <div class="tl-org">IEEE Student Branch · Problem Solving Team · Menoufia University</div>
-        <ul>
-          <li>Solved 400+ algorithmic problems on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a>, and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a>.</li>
-          <li>Taught problem solving in C++ to 500+ students online and onsite.</li>
-          <li>Managed the IEEE summer camp project that trained students and prepared them for the ICPC competition.</li>
-        </ul>
-      </div></div>
-    </div>
-  </div>
-</section>
-
-<!-- AWARDS + CERTS -->
-<section id="awards" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// awards &amp; certifications</p><h2>Competitions and credentials</h2></div></div>
-    <div class="grid3">
-      <a class="award reveal" href="https://www.linkedin.com/posts/omar-ehab-einshouka-82a65b195_cybersecurity-egypt-pentesting-activity-7172757532589985792-3PzE" target="_blank" rel="noopener"><div class="place">3<sup>rd</sup></div><b>Cyber Champions CTF</b><span>Organised by Zinad IT &amp; ITI</span></a>
-      <a class="award reveal" href="https://drive.google.com/file/d/1sFyQ6HwcITICQIUX1EIGHNoRpF62ttEi/view" target="_blank" rel="noopener"><div class="place">7<sup>th</sup></div><b>ICMTC CTF Finals</b><span>Capture the Flag finals</span></a>
-      <a class="award reveal" href="https://drive.google.com/file/d/1W6qz6h4YaBPFhdfn_B1UsZ8LJWdI_4R6/view" target="_blank" rel="noopener"><div class="place">9<sup>th</sup></div><b>Menoufia University Collegiate Programming Contest</b><span>ICPC</span></a>
-    </div>
+    <div class="sec-head reveal"><div><p class="kicker">// credentials</p><h2>Credentials and certificates</h2></div><p>Select a course to open its certificate.</p></div>
     <div class="certs">
       <div class="cert feature reveal">
         <h3>EC-Council Certified Incident Handler (ECIH)</h3>
@@ -627,7 +677,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="band">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">// skills</p><h2>What I work with</h2></div></div>
     <div class="skills">
@@ -644,9 +694,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </section>
 
 <!-- WRITING -->
-<section id="writing" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="writing">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">// writing</p><h2>On Medium</h2></div><p>I write about the things I build: how they work, and why they're built that way.</p></div>
+    <div class="sec-head reveal"><div><p class="kicker">// articles</p><h2>Articles</h2></div><p>I write about the things I build: how they work, and why they're built that way.</p></div>
     <article class="article reveal">
       <div class="img"><img src="assets/01b-the-pipeline-feedback.jpg" alt="The CRM's eleven-step pipeline feedback" loading="lazy"></div>
       <div class="txt">
@@ -671,6 +721,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     </div>
   </div>
 </section>
+
 </main>
 
 <footer><div class="wrap"><span>© <span id="yr"></span> Omar Ehab Einshouka</span><span class="mono">built with HTML, CSS &amp; a little JS</span></div></footer>
@@ -715,6 +766,7 @@ const social = [
   ['github','github','GitHub'],['hackthebox','hackthebox','Hack The Box'],
   ['codeforces','code','Codeforces'],['vjudge','code','VJudge'],['beecrowd','code','beecrowd']
 ];
+document.querySelectorAll('.ai[data-i]').forEach(el => el.innerHTML = svg(el.dataset.i));
 document.getElementById('socials').innerHTML = social.filter(([k])=>LINKS[k]).map(([k,i,l])=>a(LINKS[k],i,l)).join('');
 
 const contact = [['email','email','Email me','btn'],['linkedin','linkedin','LinkedIn','btn ghost'],['medium','medium','Medium','btn ghost'],['github','github','GitHub','btn ghost'],['cv','file','Download CV','btn ghost']];

@@ -21,20 +21,20 @@
   color-scheme: dark;
   --bg:#08090c; --bg-2:#0c0e12; --surface:#111318; --surface-2:#161920; --line:#1e222a; --line-2:#2b313c;
   --ink:#eceef2; --ink-2:#bac0cb; --muted:#8b93a2;
-  --accent:#1e4fd8; --accent-ink:#86a3ff; --accent-soft:rgba(30,79,216,.16); --red:#86a3ff;
-  --amber:#1e4fd8; --amber-ink:#86a3ff; --amber-soft:rgba(30,79,216,.18);
+  --accent:#1466de; --accent-ink:#6aa8ff; --accent-soft:rgba(20,102,222,.16); --red:#6aa8ff;
+  --amber:#1466de; --amber-ink:#6aa8ff; --amber-soft:rgba(20,102,222,.18);
   --num:linear-gradient(180deg,#ffffff 0%,#d9e1f2 100%);
   --sky:#38bdf8; --cyan:#22d3ee; --indigo:#6366f1; --navy:#1e3a8a; --gold:#60a5fa;
-  --grad:linear-gradient(120deg,#2253e6 0%,#1638a8 100%);
-  --grad-text:linear-gradient(120deg,#7895f5 0%,#3f68ea 55%,#2c58e0 100%);
-  --glow:0 10px 30px -14px rgba(30,79,216,.6);
+  --grad:linear-gradient(120deg,#1a70ec 0%,#1259c7 100%);
+  --grad-text:linear-gradient(120deg,#5b9bff 0%,#2f80f2 55%,#1a6ee8 100%);
+  --glow:0 10px 30px -14px rgba(20,102,222,.6);
   --shadow:0 1px 2px rgba(0,0,0,.4),0 14px 36px rgba(0,0,0,.45);
   --ease-out:cubic-bezier(.23,1,.32,1);
   --radius:14px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
-body{margin:0;background:radial-gradient(1000px 560px at 90% -10%,rgba(30,79,216,.12),transparent 60%),radial-gradient(800px 520px at -10% 105%,rgba(30,79,216,.06),transparent 60%),var(--bg);background-attachment:fixed;color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:radial-gradient(1000px 560px at 90% -10%,rgba(20,102,222,.12),transparent 60%),radial-gradient(800px 520px at -10% 105%,rgba(20,102,222,.06),transparent 60%),var(--bg);background-attachment:fixed;color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 img{max-width:100%;display:block}
 .mono{font-family:"JetBrains Mono",ui-monospace,monospace}
@@ -61,8 +61,8 @@ header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--b
 /* hero */
 .hero{padding:96px 0 64px;position:relative;overflow:hidden;isolation:isolate}
 .hero > .wrap{z-index:1}
-.hero::before{content:"";position:absolute;width:620px;height:620px;right:-120px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(30,79,216,.16),rgba(30,79,216,.04) 45%,transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 18s ease-in-out infinite alternate}
-.hero::after{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-120px;border-radius:50%;background:radial-gradient(circle,rgba(30,79,216,.10),transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 22s ease-in-out infinite alternate-reverse}
+.hero::before{content:"";position:absolute;width:620px;height:620px;right:-120px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(20,102,222,.16),rgba(20,102,222,.04) 45%,transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 18s ease-in-out infinite alternate}
+.hero::after{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-120px;border-radius:50%;background:radial-gradient(circle,rgba(20,102,222,.10),transparent 70%);filter:blur(10px);pointer-events:none;animation:aurora 22s ease-in-out infinite alternate-reverse}
 @keyframes aurora{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-60px,40px) scale(1.12)}100%{transform:translate(30px,80px) scale(.95)}}
 .hero .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr);gap:48px;align-items:center}
 .hero .lede{max-width:640px}
@@ -244,7 +244,7 @@ h3{letter-spacing:-.02em;margin:0}
 
 /* contact */
 .contact{border:1px solid var(--line-2);border-radius:22px;background:linear-gradient(160deg,#141821,#0b0d11 70%);color:#e8edf5;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
-.contact::before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 25% 25%,rgba(30,79,216,.20),transparent 45%),radial-gradient(circle at 80% 75%,rgba(30,79,216,.12),transparent 45%);animation:aurora 20s ease-in-out infinite alternate}
+.contact::before{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 25% 25%,rgba(20,102,222,.20),transparent 45%),radial-gradient(circle at 80% 75%,rgba(20,102,222,.12),transparent 45%);animation:aurora 20s ease-in-out infinite alternate}
 .contact > *{position:relative}
 .contact h2{color:#fff}
 .contact p{opacity:.75;max-width:520px;margin:12px auto 26px}
@@ -311,7 +311,7 @@ section.band{background:var(--bg-2);border-top:1px solid var(--line);border-bott
 
 /* UX layer */
 header.nav{position:sticky}
-.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:linear-gradient(90deg,#1638a8,#4f7cf7);transform-origin:left;transform:scaleX(var(--p,0));pointer-events:none}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:linear-gradient(90deg,#1259c7,#3d8bf5);transform-origin:left;transform:scaleX(var(--p,0));pointer-events:none}
 .nav nav a{position:relative;transition:color .2s ease,background-color .2s ease}
 .nav nav a.on{color:#fff;background:var(--accent-soft)}
 .nav nav a.on::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;border-radius:2px;background:var(--grad)}
@@ -325,7 +325,7 @@ header.nav{position:sticky}
 .tl-card,.cert,.skill,.cp-card,.edu,.xp{transition:border-color .25s ease,transform .3s var(--ease-out),box-shadow .3s ease}
 .tl-card:hover,.cert:hover,.skill:hover,.cp-card:hover,.edu:hover{border-color:var(--line-2);box-shadow:0 18px 40px -26px rgba(0,0,0,.9)}
 .skill h3 svg,.edu-ic svg{color:var(--amber-ink)}
-.edu-ic{background:linear-gradient(135deg,rgba(30,79,216,.16),rgba(30,79,216,.05))}
+.edu-ic{background:linear-gradient(135deg,rgba(20,102,222,.16),rgba(20,102,222,.05))}
 .chips a{transition:border-color .2s ease,color .2s ease,transform .2s var(--ease-out)}
 .chips a:hover{transform:translateY(-1px)}
 .kicker{color:var(--accent-ink)}

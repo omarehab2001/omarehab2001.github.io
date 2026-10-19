@@ -28,6 +28,7 @@
       <a href="#awards">Awards</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#certs">Certificates</a>
       <a href="#skills">Skills</a>
       <a href="#writing">Articles</a>
@@ -323,8 +324,40 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects" class="band">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><p class="kicker">$ ls ~/projects/</p><h2>Personal projects</h2></div><p>Built on my own time, for my own security work.</p></div>
+    <article class="project reveal">
+      <div class="body">
+        <div class="tag-row"><span class="pill live">Personal project</span><span class="pill">Local-first</span><span class="pill sig">Security by design</span></div>
+        <h3>CyberVault</h3>
+        <p class="sub">A pentest knowledge vault and case-study tracker. Map the target network, log every step automatically, and export a PDF report.</p>
+        <p>A personal security knowledge base plus an engagement tracker. Notes are organised as Domain → Category → Topic, with Markdown, code, Mermaid and Excalidraw blocks, and the whole library is shown as an interactive mind map. Case studies have a live network map whose changes are logged with timestamps, a notes area for screenshots, and a one-click PDF report.</p>
+        <ul class="feat">
+          <li><b>Interactive network map</b> for engagements: 19 device types with IP, OS, ports and status; network, attack-path, pivot and data-flow links; nmap-style paste for ports.</li>
+          <li><b>Automatic activity log.</b> Set up the starting map, press Start case, and every later change is recorded with the time.</li>
+          <li><b>PDF report export</b> with selectable sections, a live page preview and a landscape map page drawn as SVG.</li>
+          <li><b>Knowledge map</b> of the whole library as a zoomable mind map, with full-text search on Ctrl+K (SQLite FTS5).</li>
+          <li><b>Security by design:</b> a loopback-only server, a Host allow-list against DNS rebinding, a custom-header defence against cross-site writes, uploads checked by their bytes, and a strict CSP.</li>
+        </ul>
+        <p><b>My role:</b> designed and built it end to end: data model, API, security hardening, UI and UX, and the report export.</p>
+        <div class="stack"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS 4</span><span>TanStack Query</span><span>React Flow</span><span>Mermaid</span><span>Excalidraw</span><span>Fastify 5</span><span>Node 24</span><span>node:sqlite + FTS5</span><span>node:test</span></div>
+        <div class="plinks"><a class="btn primary" href="assets/cybervault/CyberVault-sample-case-report.pdf" target="_blank" rel="noopener">View sample report</a></div>
+      </div>
+      <div class="media">
+        <img src="assets/cybervault/04-case-map.jpg" width="1440" height="900" alt="CyberVault case study: the network map of a practice lab with the activity log beside it" loading="lazy">
+        <img src="assets/cybervault/05-pdf-export.jpg" width="1440" height="900" alt="CyberVault PDF export with section choices and a live page preview" loading="lazy">
+        <img src="assets/cybervault/03-topic.jpg" width="1440" height="900" alt="A CyberVault topic page on SQL injection with text, a testing-flow diagram and code" loading="lazy">
+        <img src="assets/cybervault/01-knowledge-map.jpg" width="1440" height="900" alt="The CyberVault knowledge map showing the whole library as a mind map" loading="lazy">
+        <p class="cap">Screenshots and the sample report use demo lab data only. Select an image to enlarge it.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
 <!-- CERTIFICATES -->
-<section id="certs" class="band">
+<section id="certs">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">$ ls certificates/</p><h2>Credentials and certificates</h2></div><p>Select a course to open its certificate.</p></div>
     <div class="certs">
@@ -360,7 +393,7 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" class="band">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">$ cat skills.txt</p><h2>What I work with</h2></div></div>
     <div class="skills">
@@ -377,7 +410,7 @@
 </section>
 
 <!-- WRITING -->
-<section id="writing" class="band">
+<section id="writing">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">$ ls articles/</p><h2>Articles</h2></div><p>I write about the things I build: how they work, and why they're built that way.</p></div>
     <article class="article reveal">

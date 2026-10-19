@@ -295,3 +295,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .eyebrow i,.role .caret{animation:none}
   .xp[open] .xp-body{animation:none}
 }
+
+/* personal projects: one large screenshot, the rest as thumbnails */
+#projects .project .media{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;align-content:start}
+#projects .project .media img{height:auto}
+#projects .project .media img:first-child{grid-column:1/-1}
+#projects .project .media .cap{grid-column:1/-1}

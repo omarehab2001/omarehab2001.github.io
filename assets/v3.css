@@ -393,5 +393,3 @@ dialog.pd::backdrop{background:rgba(1,4,9,.78);backdrop-filter:blur(3px)}
 /* the podium finish stands out */
 .award:first-child{border-color:var(--accent-line);background:linear-gradient(160deg,rgba(31,111,235,.30),var(--surface) 60%)}
 .award:first-child .place{font-size:76px}
-.award:first-child .podium{display:inline-block}
-.award .podium{display:none;margin-left:10px;font:700 11px var(--mono);letter-spacing:.06em;color:#fff;background:var(--fill);padding:4px 9px;border-radius:6px;vertical-align:middle}

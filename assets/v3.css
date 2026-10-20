@@ -380,3 +380,18 @@ dialog.pd::backdrop{background:rgba(1,4,9,.78);backdrop-filter:blur(3px)}
 @keyframes glowA{to{transform:translate(-180px,140px) scale(1.15)}}
 @keyframes glowB{to{transform:translate(220px,-160px) scale(1.1)}}
 @media (prefers-reduced-motion:reduce){.bg-glow{animation:none}}
+
+/* awards: the place is the hero of each card */
+.award{position:relative;overflow:hidden;padding:24px 24px 22px;background:linear-gradient(160deg,rgba(31,111,235,.14),var(--surface) 55%);border-color:rgba(56,139,253,.28)}
+.award::after{content:"";position:absolute;top:18px;right:18px;width:34px;height:34px;opacity:.85;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2358a6ff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='15' r='6'/%3E%3Cpath d='M8.5 10 6 3h4l2 4 2-4h4l-2.5 7'/%3E%3C/svg%3E") center/contain no-repeat}
+.award:first-child::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2358a6ff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z'/%3E%3Cpath d='M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3'/%3E%3C/svg%3E");width:40px;height:40px;opacity:1}
+.award::before{content:"";position:absolute;width:220px;height:220px;right:-90px;top:-110px;border-radius:50%;background:radial-gradient(circle,rgba(56,139,253,.22),transparent 70%);pointer-events:none}
+.award .place{display:inline-flex;align-items:flex-start;background:none;border:0;padding:0;font:800 64px/0.95 var(--sans);letter-spacing:-.05em;color:#fff;text-shadow:0 0 28px rgba(56,139,253,.55)}
+.award .place sup{font:700 20px var(--sans);letter-spacing:0;margin:6px 0 0 3px;color:var(--accent);text-shadow:none}
+.award b{font-size:18px;margin-top:16px}
+.award:hover{border-color:var(--accent-line);transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(31,111,235,.7)}
+/* the podium finish stands out */
+.award:first-child{border-color:var(--accent-line);background:linear-gradient(160deg,rgba(31,111,235,.30),var(--surface) 60%)}
+.award:first-child .place{font-size:76px}
+.award:first-child .podium{display:inline-block}
+.award .podium{display:none;margin-left:10px;font:700 11px var(--mono);letter-spacing:.06em;color:#fff;background:var(--fill);padding:4px 9px;border-radius:6px;vertical-align:middle}

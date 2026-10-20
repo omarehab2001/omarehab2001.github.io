@@ -303,14 +303,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 #projects .project .media .cap{grid-column:1/-1}
 
 /* intro sits closer to the menu */
-.hero{padding-top:36px}
-@media (max-width:600px){.hero{padding-top:24px}}
+.hero{padding:36px 0}
+@media (max-width:600px){.hero{padding:28px 0}}
 
 /* education: a small, simple section */
-section.mini{padding:28px 0 8px}
+section.mini{padding:36px 0}
+@media (max-width:600px){section.mini{padding:28px 0}}
 section.mini .kicker{margin-bottom:10px}
 .edu-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.edu-list li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:4px 18px;font-size:15px;color:var(--muted)}
+.edu-list li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:4px 18px;font-size:15px;color:var(--muted)}
 .edu-list .when{font:500 13px var(--mono);color:var(--accent);padding-top:2px}
 .edu-list b{color:var(--ink);font-weight:600}
 @media (max-width:600px){.edu-list li{grid-template-columns:minmax(0,1fr)}}
@@ -318,3 +319,6 @@ section.mini .kicker{margin-bottom:10px}
 /* award cards say they open their proof */
 .award .go{display:block;width:fit-content;margin-top:12px;font:500 12.5px var(--mono);font-style:normal;color:var(--accent);transition:transform .2s var(--ease)}
 .award:hover .go{transform:translateX(3px);text-decoration:underline;text-underline-offset:3px}
+
+/* every section label in the same blue */
+.sec-head .kicker,.contact .kicker,section.mini .kicker{color:var(--accent)}

@@ -306,12 +306,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .hero{padding-top:36px}
 @media (max-width:600px){.hero{padding-top:24px}}
 
-/* education as a simple list, no boxes */
-.edu-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
-.edu-list li{display:grid;grid-template-columns:200px minmax(0,1fr);gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
-.edu-list .when{font:500 13.5px var(--mono);color:var(--accent);padding-top:2px}
-.edu-list b{display:block;color:var(--ink);font-size:17.5px;font-weight:600}
-.edu-list div span{color:var(--muted);font-size:15px}
+/* education: a small, simple section */
+section.mini{padding:28px 0 8px}
+section.mini .kicker{margin-bottom:10px}
+.edu-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.edu-list li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:4px 18px;font-size:15px;color:var(--muted)}
+.edu-list .when{font:500 13px var(--mono);color:var(--accent);padding-top:2px}
+.edu-list b{color:var(--ink);font-weight:600}
 @media (max-width:600px){.edu-list li{grid-template-columns:minmax(0,1fr)}}
 
 /* award cards say they open their proof */

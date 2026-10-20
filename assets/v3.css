@@ -322,3 +322,52 @@ section.mini .kicker{margin-bottom:10px}
 
 /* every section label in the same blue */
 .sec-head .kicker,.contact .kicker,section.mini .kicker{color:var(--accent)}
+
+/* link from the A97 experience to the projects */
+.see-proj{display:inline-block;margin-top:12px;font:500 13px var(--mono);color:var(--accent);text-decoration:none}
+.see-proj:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* projects grid */
+.pgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.pgrid > .pcard{grid-column:span 2}
+.pgrid > .pcard:nth-child(n+4){grid-column:span 3}
+.pgrid > .pcard:nth-child(n+4) .pimg{aspect-ratio:16/8}
+@media (max-width:980px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pgrid > .pcard,.pgrid > .pcard:nth-child(n+4){grid-column:span 1}.pgrid > .pcard:last-child{grid-column:1/-1}.pgrid > .pcard:nth-child(n+4) .pimg{aspect-ratio:16/10}.pgrid > .pcard:last-child .pimg{aspect-ratio:16/7}}
+@media (max-width:620px){.pgrid{grid-template-columns:minmax(0,1fr)}.pgrid > .pcard:last-child{grid-column:auto}.pgrid > .pcard:last-child .pimg{aspect-ratio:16/10}}
+.pcard{all:unset;box-sizing:border-box;display:flex;flex-direction:column;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .2s ease,transform .25s var(--ease)}
+.pcard:hover{border-color:var(--accent-line);transform:translateY(-3px)}
+.pcard:active{transform:scale(.985)}
+.pcard:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.pimg{display:block;aspect-ratio:16/10;overflow:hidden;background:#0f141b;border-bottom:1px solid var(--line)}
+.pimg img{width:100%;height:100%;object-fit:cover;object-position:top left;transition:transform .5s var(--ease)}
+.pcard:hover .pimg img{transform:scale(1.03)}
+.pimg.noimg{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--accent)}
+.pimg.noimg svg{width:46px;height:46px}
+.pimg.noimg small{font:400 12px var(--mono);color:var(--muted)}
+.pmeta{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:16px 18px 18px;flex:1}
+.pmeta b{color:var(--ink);font-size:17px}
+.pmeta .pdesc{color:var(--muted);font-size:14.5px;line-height:1.55}
+.pmeta .tagx{font:700 11px var(--mono);padding:3px 8px;border-radius:6px}
+.pmeta .go{margin-top:auto;padding-top:8px;font:500 12.5px var(--mono);color:var(--accent)}
+.pcard:hover .go{text-decoration:underline;text-underline-offset:3px}
+
+/* project details pop-up */
+dialog.pd{width:min(860px,calc(100vw - 32px));max-height:min(88vh,900px);padding:0;border:1px solid var(--line-2);border-radius:14px;background:var(--surface);color:var(--ink-2);overflow:hidden}
+dialog.pd[open]{display:flex;flex-direction:column;animation:pdIn .25s var(--ease)}
+dialog.pd::backdrop{background:rgba(1,4,9,.78);backdrop-filter:blur(3px)}
+@keyframes pdIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+.pd-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.pd-head h3{font-size:22px;margin-top:6px}
+.pd-head .tagx{font:700 11px var(--mono);padding:3px 8px;border-radius:6px}
+.pd-x{all:unset;cursor:pointer;width:38px;height:38px;flex:none;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line);color:var(--ink);font-size:22px;line-height:1;transition:border-color .2s ease,background-color .2s ease}
+.pd-x:hover{border-color:var(--line-2);background:var(--surface-2)}
+.pd-x:focus-visible{outline:2px solid var(--accent)}
+.pd-body{padding:18px 20px 22px;overflow-y:auto}
+.pd-body > p{margin:0 0 12px;font-size:15.5px}
+.pd-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 8px}
+.pd-shots.one{grid-template-columns:minmax(0,1fr)}
+.pd-shots img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);transition:transform .3s var(--ease)}
+.pd-shots a:hover img{transform:scale(1.015)}
+.pd-body .plinks{margin-top:14px}
+@media (max-width:600px){.pd-shots{grid-template-columns:minmax(0,1fr)}.pd-head,.pd-body{padding-left:16px;padding-right:16px}}
+@media (prefers-reduced-motion:reduce){dialog.pd[open]{animation:none}}

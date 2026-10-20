@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/v3.css">
+<link rel="stylesheet" href="assets/v3.css?v=5">
 </head>
 <body>
 
@@ -25,8 +25,8 @@
   <div class="wrap">
     <a class="brand" href="#top"><span class="dot">OE</span>Omar Einshouka</a>
     <nav id="menu">
-      <a href="#awards">Awards</a>
       <a href="#education">Education</a>
+      <a href="#awards">Awards</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#certs">Certificates</a>
@@ -48,7 +48,7 @@
       <p class="whoami"><b>$</b> whoami</p>
       <h1>Omar Ehab<br><span>Einshouka</span></h1>
       <p class="role">I'm a <span class="typed" id="typed">Cybersecurity Engineer</span><span class="caret"></span></p>
-      <p class="lede">I break things to learn how they work, and I build things that people use every day. I'm a CTF player and penetration tester who also built the full digital ecosystem of a real estate startup: four products for finance, sales and clients.</p>
+      <p class="lede">Cybersecurity engineer and CTF player obsessed with turning anything into clear diagrams, passionate about offensive security, learning new technologies, and uncovering their flaws. Active on Hack The Box, with a competitive programming background. Driven to build things that serve humanity.</p>
       <div class="cta">
         <a class="btn primary" href="#experience">./see-my-work
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -58,41 +58,33 @@
       <div class="socials" id="socials"></div>
     </div>
   </div>
-  <div class="wrap" style="margin-top:48px">
-    <div class="stats reveal">
-      <div><b>4</b><span>products shipped at A97</span></div>
-      <div><b>400+</b><span>algorithm problems solved</span></div>
-      <div><b>500+</b><span>students taught C++</span></div>
-      <div><b>3</b><span>CTF &amp; ICPC podium finishes</span></div>
-    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head reveal"><div><p class="kicker">$ cat education.txt</p><h2>Education and military service</h2></div></div>
+    <ul class="edu-list reveal">
+      <li><span class="when">Sep 2019 – Jul 2024</span><div><b>B.Sc. in Cybersecurity &amp; Data Analytics</b><span>Faculty of Electronic Engineering, Menoufia University</span></div></li>
+      <li><span class="when">Apr 2025 – Jun 2026</span><div><b>Military service</b><span>Egyptian military service, completed</span></div></li>
+    </ul>
   </div>
 </section>
 
 <!-- AWARDS + CP -->
-<section id="awards">
+<section id="awards" class="band">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">$ cat awards.txt</p><h2>Competitions and competitive programming</h2></div></div>
     <div class="grid3">
-      <a class="award reveal" href="https://www.linkedin.com/posts/omar-ehab-einshouka-82a65b195_cybersecurity-egypt-pentesting-activity-7172757532589985792-3PzE" target="_blank" rel="noopener"><div class="place">3<sup>rd</sup></div><b>Cyber Champions CTF</b><span>Organised by Zinad IT &amp; ITI</span></a>
-      <a class="award reveal" href="https://drive.google.com/file/d/1sFyQ6HwcITICQIUX1EIGHNoRpF62ttEi/view" target="_blank" rel="noopener"><div class="place">7<sup>th</sup></div><b>ICMTC CTF Finals</b><span>Capture the Flag finals</span></a>
-      <a class="award reveal" href="https://drive.google.com/file/d/1W6qz6h4YaBPFhdfn_B1UsZ8LJWdI_4R6/view" target="_blank" rel="noopener"><div class="place">9<sup>th</sup></div><b>Menoufia University Collegiate Programming Contest</b><span>ICPC</span></a>
+      <a class="award reveal" href="https://www.linkedin.com/posts/omar-ehab-einshouka-82a65b195_cybersecurity-egypt-pentesting-activity-7172757532589985792-3PzE" target="_blank" rel="noopener"><div class="place">3<sup>rd</sup></div><b>Cyber Champions CTF</b><span>Organised by Zinad IT &amp; ITI</span><em class="go">See the LinkedIn post ↗</em></a>
+      <a class="award reveal" href="https://drive.google.com/file/d/1sFyQ6HwcITICQIUX1EIGHNoRpF62ttEi/view" target="_blank" rel="noopener"><div class="place">7<sup>th</sup></div><b>ICMTC CTF Finals</b><span>Capture the Flag finals</span><em class="go">View the certificate ↗</em></a>
+      <a class="award reveal" href="https://drive.google.com/file/d/1W6qz6h4YaBPFhdfn_B1UsZ8LJWdI_4R6/view" target="_blank" rel="noopener"><div class="place">9<sup>th</sup></div><b>Menoufia University Collegiate Programming Contest</b><span>ICPC</span><em class="go">View the certificate ↗</em></a>
     </div>
     <h3 class="sub-h reveal">competitive-programming.txt</h3>
     <div class="cp">
       <div class="cp-card reveal"><b class="num">400+</b><span>algorithm problems solved on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a> and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a></span></div>
       <div class="cp-card reveal"><b class="num">500+</b><span>students taught problem solving in C++, online and onsite, with the IEEE Student Branch</span></div>
       <div class="cp-card reveal"><b class="num">ICPC</b><span>Managed the IEEE summer camp that trained students and prepared them for the ICPC competition</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education" class="band">
-  <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ cat education.txt</p><h2>Education and military service</h2></div></div>
-    <div class="edu-grid">
-      <div class="edu reveal"><div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div><div><span class="when">Sep 2019 – Jul 2024</span><h3>B.Sc. in Cybersecurity &amp; Data Analytics</h3><p>Faculty of Electronic Engineering, Menoufia University</p></div></div>
-      <div class="edu reveal"><div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div><span class="when">Completed</span><h3>Military service</h3><p>Egyptian military service, fully completed</p></div></div>
     </div>
   </div>
 </section>
@@ -513,7 +505,7 @@ document.querySelectorAll('[data-links]').forEach(el=>{
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 /* typed role */
-const roles = ['Cybersecurity Engineer','Penetration Tester','CTF Player','Technical Lead','Builder of secure products'];
+const roles = ['Cybersecurity Engineer','CTF Player','Attack Surface Explorer'];
 const t = document.getElementById('typed');
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   let r = 0, c = roles[0].length, del = true;

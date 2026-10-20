@@ -301,3 +301,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 #projects .project .media img{height:auto}
 #projects .project .media img:first-child{grid-column:1/-1}
 #projects .project .media .cap{grid-column:1/-1}
+
+/* intro sits closer to the menu */
+.hero{padding-top:36px}
+@media (max-width:600px){.hero{padding-top:24px}}
+
+/* education as a simple list, no boxes */
+.edu-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.edu-list li{display:grid;grid-template-columns:200px minmax(0,1fr);gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--line)}
+.edu-list .when{font:500 13.5px var(--mono);color:var(--accent);padding-top:2px}
+.edu-list b{display:block;color:var(--ink);font-size:17.5px;font-weight:600}
+.edu-list div span{color:var(--muted);font-size:15px}
+@media (max-width:600px){.edu-list li{grid-template-columns:minmax(0,1fr)}}
+
+/* award cards say they open their proof */
+.award .go{display:block;width:fit-content;margin-top:12px;font:500 12.5px var(--mono);font-style:normal;color:var(--accent);transition:transform .2s var(--ease)}
+.award:hover .go{transform:translateX(3px);text-decoration:underline;text-underline-offset:3px}

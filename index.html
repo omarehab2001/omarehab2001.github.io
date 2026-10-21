@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/v3.css?v=16">
+<link rel="stylesheet" href="assets/v3.css?v=19">
 </head>
 <body>
 <canvas id="bgfx" aria-hidden="true"></canvas><div class="bg-glow a" aria-hidden="true"></div><div class="bg-glow b" aria-hidden="true"></div>
@@ -34,6 +34,7 @@
       <a href="#skills">Skills</a>
       <a href="#writing">Articles</a>
       <a href="#contact">Contact</a>
+      <a href="#message">Message</a>
     </nav>
     <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
@@ -49,7 +50,7 @@
       <p class="whoami"><b>$</b> whoami</p>
       <h1>Omar Ehab<br><span>Einshouka</span></h1>
       <p class="role">I'm a <span class="typed" id="typed">Cybersecurity Engineer</span><span class="caret"></span></p>
-      <p class="lede">Cybersecurity engineer and CTF player obsessed with turning anything into clear diagrams, passionate about offensive security, learning new technologies, and uncovering their flaws. Active on Hack The Box, with a competitive programming background. Driven to build things that serve humanity.</p>
+      <p class="lede">Cybersecurity engineer and CTF player obsessed with turning anything into clear diagrams, passionate about offensive security, breaking systems, learning new technologies, and uncovering their flaws. Active on Hack The Box, with a competitive programming background. Driven to build things that serve humanity.</p>
       <div class="cta">
         <a class="btn primary" href="#experience">./see-my-work
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -84,7 +85,7 @@
     <h3 class="sub-h reveal">competitive-programming.txt</h3>
     <div class="cp">
       <div class="cp-card reveal"><b class="num">400+</b><span>algorithm problems solved on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a> and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a></span></div>
-      <div class="cp-card reveal"><b class="num">500+</b><span>students taught problem solving in C++, online and onsite, with the IEEE Student Branch</span></div>
+      <div class="cp-card reveal"><b class="num">500+</b><span>students taught problem solving and algorithms in C++, online and onsite, with the IEEE Student Branch</span></div>
       <div class="cp-card reveal"><b class="num">ICPC</b><span>Managed the IEEE summer camp that trained students and prepared them for the ICPC competition</span></div>
     </div>
   </div>
@@ -94,7 +95,7 @@
 <section id="experience" class="band">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">$ cat experience.log</p><h2>Where I've worked and trained</h2></div></div>
-    <div class="tl">
+    <div class="tl"><span class="tl-led" aria-hidden="true"></span>
       <div class="tl-item reveal"><div class="tl-card">
         <div class="tl-top"><h3>Technical Lead</h3><span class="when">Oct 2025 – Sep 2026</span></div>
         <div class="tl-org">A97 · Real Estate Startup · Cairo</div>
@@ -102,13 +103,13 @@
           <li>Built the company's full digital ecosystem from scratch, delivering 4 products for finance, sales, and clients.</li>
           <li>Developed a finance tracker and a web platform for selling real estate leads.</li>
           <li>Built a CRM for the sales and marketing teams, giving admins full visibility into every action across the company.</li>
-          <li>Led a team of 3 developers to build a property marketplace with interactive map search, unit comparison, and client property listings.</li>
+          <li>Worked as project manager for a team of 3 developers to build a property marketplace with interactive map search, unit comparison, and client property listings.</li>
         </ul>
         <a class="see-proj" href="#projects">See these projects →</a>
       </div></div>
       <div class="tl-item reveal"><div class="tl-card">
         <div class="tl-top"><h3>Offensive Security Intern</h3><span class="when">Jul 2024 – Aug 2024</span></div>
-        <div class="tl-org">Zinad IT · Summer Training</div>
+        <div class="tl-org">Zinad IT · Awarded internship</div>
         <ul>
           <li>Performed web application and API penetration testing, and AWS cloud penetration testing.</li>
           <li>Built a detailed penetration testing checklist to standardise assessment coverage.</li>
@@ -137,7 +138,7 @@
         <div class="tl-org">IEEE Student Branch · Problem Solving Team · Menoufia University</div>
         <ul>
           <li>Solved 400+ algorithmic problems on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a>, and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a>.</li>
-          <li>Taught problem solving in C++ to 500+ students online and onsite.</li>
+          <li>Taught problem solving and algorithms in C++ to 500+ students online and onsite.</li>
           <li>Managed the IEEE summer camp project that trained students and prepared them for the ICPC competition.</li>
         </ul>
       </div></div>
@@ -149,6 +150,7 @@
 <section id="projects">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">$ ls ~/projects/</p><h2>Projects</h2></div><p>Select a project to see the details.</p></div>
+    <p class="swipe-hint" aria-hidden="true">Swipe to see more projects <span>→</span></p>
     <div class="pgrid">
       <button class="pcard reveal" type="button" data-open="pd-crm">
         <span class="pimg"><img src="assets/10-admin-1-dashboard.jpg" alt="The A97 CRM admin dashboard" loading="lazy"></span>
@@ -156,7 +158,7 @@
       </button>
       <button class="pcard reveal" type="button" data-open="pd-infinity">
         <span class="pimg"><img src="assets/infinity/home.jpg" alt="The a97homes.com homepage" loading="lazy"></span>
-        <span class="pmeta"><span class="tagx high">A97 · TEAM OF 3</span><b>A97 Infinity</b><span class="pdesc">The a97homes.com property marketplace: map search, unit comparison and client listings.</span><span class="go">View details →</span></span>
+        <span class="pmeta"><span class="tagx high">A97 · PROJECT MANAGER</span><b>A97 Infinity</b><span class="pdesc">The a97homes.com property marketplace: map search, unit comparison and client listings.</span><span class="go">View details →</span></span>
       </button>
       <button class="pcard reveal" type="button" data-open="pd-leads">
         <span class="pimg"><img src="assets/leadgen/browse.jpg" alt="The Lead Generator buyer view with leads for sale" loading="lazy"></span>
@@ -199,9 +201,9 @@
 </dialog>
 
 <dialog class="pd" id="pd-infinity" aria-labelledby="pd-infinity-t">
-  <div class="pd-head"><div><span class="tagx high">A97 · TEAM OF 3 · 222 ENDPOINTS</span><h3 id="pd-infinity-t">A97 Infinity</h3></div><button class="pd-x" type="button" aria-label="Close">×</button></div>
+  <div class="pd-head"><div><span class="tagx high">A97 · PROJECT MANAGER · 222 ENDPOINTS</span><h3 id="pd-infinity-t">A97 Infinity</h3></div><button class="pd-x" type="button" aria-label="Close">×</button></div>
   <div class="pd-body">
-    <p>I led a team of three developers to build A97's client-facing marketplace in Arabic and English. Behind it is one API with 222 endpoints in five modules: public search, owners, signed-in users and a back office with role-based permissions.</p>
+    <p>As project manager for a team of three developers, I delivered A97's client-facing marketplace in Arabic and English. Behind it is one API with 222 endpoints in five modules: public search, owners, signed-in users and a back office with role-based permissions.</p>
     <ul class="feat">
       <li><b>Map search</b> for units and compounds, filtered by city, developer, type, price, area, delivery date and payment plan.</li>
       <li><b>Side-by-side comparison</b> of two to four units or compounds, and similar-compound suggestions.</li>
@@ -280,35 +282,26 @@
 <!-- CERTIFICATES -->
 <section id="certs" class="band">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ ls certificates/</p><h2>Credentials and certificates</h2></div><p>Select a course to open its certificate.</p></div>
-    <div class="certs">
-      <div class="cert feature reveal">
-        <h3>EC-Council Certified Incident Handler (ECIH)</h3>
-        <div class="who">EC-Council · Sep 2024 · Credential ID ECC3972615408</div>
-        <div class="chips"><span>Incident handling</span><span>Forensics</span><span>Threat response</span></div>
+    <div class="sec-head reveal"><div><p class="kicker">$ ls certificates/</p><h2>Credentials and certificates</h2></div><p>Select a certificate to open it.</p></div>
+    <div class="cert-main reveal">
+      <span class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14.5-1.5 7L12 19l4.5 2.5-1.5-7"/><path d="m9.5 9 1.8 1.8L14.8 7.5"/></svg></span>
+      <div>
+        <span class="issuer">EC-Council · Certification</span>
+        <h3>Certified Incident Handler (ECIH)</h3>
+        <p class="meta">Issued Sep 2024 · Credential ID <code>ECC3972615408</code></p>
       </div>
-      <div class="cert reveal">
-        <h3>Cisco Networking Academy</h3>
-        <div class="who">2021 – 2022</div>
-        <div class="chips">
-          <a href="https://drive.google.com/file/d/18cvlSonQBiC_OmNY57IvYp6ZtILyR29Y/view" target="_blank" rel="noopener">CyberOps Associate</a>
-          <a href="https://drive.google.com/file/d/1z6j5d3_6FdcIQy_ALOkmNgixfq2jKiUa/view" target="_blank" rel="noopener">Cybersecurity Essentials</a>
-          <a href="https://drive.google.com/file/d/1X5GYuipwqOZkyX0pjfTz5y2oEgsdf-E9/view" target="_blank" rel="noopener">Introduction to Cybersecurity</a>
-        </div>
-      </div>
-      <div class="cert reveal" style="grid-column:1/-1">
-        <h3>Mahara-Tech</h3>
-        <div class="who">Courses</div>
-        <div class="chips">
-          <a href="https://drive.google.com/file/d/1ooKcN0jPTRgls_fOqaSDTRTtzx9_c29Z/view" target="_blank" rel="noopener">Ethical Hacking</a>
-          <a href="https://drive.google.com/file/d/1KgAkKk9bjyKugEjDulX--QK5vbb-3bU3/view" target="_blank" rel="noopener">OWASP Top 10 (Web) 2021</a>
-          <a href="https://drive.google.com/file/d/10TYJns-fdMuoO_QsAwuTndxmD1KVe9z4/view" target="_blank" rel="noopener">Network Security</a>
-          <a href="https://drive.google.com/file/d/15kqmmCxyVmO0G8rdPFwb0hS_4Shm_Qss/view" target="_blank" rel="noopener">Network Fundamentals</a>
-          <a href="https://drive.google.com/file/d/1ai51_F7Jgtf8p_8jhmSKBMgMJpPYuRuL/view" target="_blank" rel="noopener">Implementation of Network Fundamentals</a>
-          <a href="https://drive.google.com/file/d/1q3Zc19PBJuPRKetzTOHYsVg9JkMKddBQ/view" target="_blank" rel="noopener">Network Virtualization</a>
-          <a href="https://drive.google.com/file/d/1ziydDAjl_ysdxIA48UNJJ7JT-zfwq0Vh/view" target="_blank" rel="noopener">Python</a>
-        </div>
-      </div>
+    </div>
+    <div class="cert-grid">
+      <a class="ctile reveal" href="https://drive.google.com/file/d/18cvlSonQBiC_OmNY57IvYp6ZtILyR29Y/view" target="_blank" rel="noopener"><span class="issuer">Cisco Networking Academy</span><b>CyberOps Associate</b><span class="meta">2021 – 2022</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/1z6j5d3_6FdcIQy_ALOkmNgixfq2jKiUa/view" target="_blank" rel="noopener"><span class="issuer">Cisco Networking Academy</span><b>Cybersecurity Essentials</b><span class="meta">2021 – 2022</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/1X5GYuipwqOZkyX0pjfTz5y2oEgsdf-E9/view" target="_blank" rel="noopener"><span class="issuer">Cisco Networking Academy</span><b>Introduction to Cybersecurity</b><span class="meta">2021 – 2022</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/1ooKcN0jPTRgls_fOqaSDTRTtzx9_c29Z/view" target="_blank" rel="noopener"><span class="issuer">Mahara-Tech</span><b>Ethical Hacking</b><span class="meta">Course</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/1KgAkKk9bjyKugEjDulX--QK5vbb-3bU3/view" target="_blank" rel="noopener"><span class="issuer">Mahara-Tech</span><b>OWASP Top 10 (Web) 2021</b><span class="meta">Course</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/10TYJns-fdMuoO_QsAwuTndxmD1KVe9z4/view" target="_blank" rel="noopener"><span class="issuer">Mahara-Tech</span><b>Network Security</b><span class="meta">Course</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/15kqmmCxyVmO0G8rdPFwb0hS_4Shm_Qss/view" target="_blank" rel="noopener"><span class="issuer">Mahara-Tech</span><b>Network Fundamentals</b><span class="meta">Course</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/1ai51_F7Jgtf8p_8jhmSKBMgMJpPYuRuL/view" target="_blank" rel="noopener"><span class="issuer">Mahara-Tech</span><b>Implementation of Network Fundamentals</b><span class="meta">Course</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/1q3Zc19PBJuPRKetzTOHYsVg9JkMKddBQ/view" target="_blank" rel="noopener"><span class="issuer">Mahara-Tech</span><b>Network Virtualization</b><span class="meta">Course</span><span class="go">View certificate ↗</span></a>
+      <a class="ctile reveal" href="https://drive.google.com/file/d/1ziydDAjl_ysdxIA48UNJJ7JT-zfwq0Vh/view" target="_blank" rel="noopener"><span class="issuer">Mahara-Tech</span><b>Python</b><span class="meta">Course</span><span class="go">View certificate ↗</span></a>
     </div>
   </div>
 </section>
@@ -334,16 +327,16 @@
 <section id="writing" class="band">
   <div class="wrap">
     <div class="sec-head reveal"><div><p class="kicker">$ ls articles/</p><h2>Articles</h2></div><p>I write about the things I build: how they work, and why they're built that way.</p></div>
-    <article class="article reveal">
-      <div class="img"><img src="assets/01b-the-pipeline-feedback.jpg" alt="The CRM's eleven-step pipeline feedback" loading="lazy"></div>
-      <div class="txt">
-        <div class="tag-row"><span class="pill">Article</span><span class="pill">CRM · Real estate</span></div>
-        <h3>Three Sales Agents, One Client</h3>
-        <p>How a real estate CRM lets a whole sales team work the same lead, and why the admin's view of that is the part I'm proudest of. The article covers the marketing, sales and admin journeys, the 11-step pipeline, the architecture, and the plan to grow it into a SaaS for many companies.</p>
-        <blockquote>It's a quiet competition between agents, and the admin has the only seat with a full view.</blockquote>
-        <div class="plinks" data-links="article"></div>
-      </div>
-    </article>
+    <div class="agrid">
+      <a class="acard reveal" href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">
+        <span class="aimg"><img src="assets/01b-the-pipeline-feedback.jpg" alt="The CRM's eleven-step pipeline feedback" loading="lazy"></span>
+        <span class="abody"><span class="tagx info">MEDIUM · CRM</span><b>Three Sales Agents, One Client</b><span class="adesc">How a real estate CRM lets a whole sales team work the same lead, and why the admin's view of it matters most.</span><span class="go">Read on Medium ↗</span></span>
+      </a>
+      <a class="acard more reveal" href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">
+        <span class="mlogo" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="7.8" cy="12" r="4.6" fill="currentColor"/><ellipse cx="15.8" cy="12" rx="2.3" ry="4.3" fill="currentColor"/><ellipse cx="20.2" cy="12" rx="1" ry="3.9" fill="currentColor"/></svg></span>
+        <span class="abody"><b>More on Medium</b><span class="adesc">Follow @omareinshouka2001 for new write-ups on what I build and break.</span><span class="go">Open my Medium ↗</span></span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -354,14 +347,37 @@
       <p class="kicker">$ ./contact.sh</p>
       <h2>Let's build something secure.</h2>
       <p>I'm open to roles in offensive security, penetration testing, and security-minded engineering. The best way to reach me is email or LinkedIn.</p>
-      <div class="cta" style="justify-content:center" id="contactLinks"></div>
+      <div class="cta" id="contactLinks"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ANONYMOUS MESSAGE -->
+<section id="message">
+  <div class="wrap">
+    <div class="msg reveal">
+      <div class="msg-intro">
+        <p class="kicker">$ echo "…" | anon</p>
+        <h2>Leave an anonymous message</h2>
+        <p>Feedback, a question, or a thought you'd rather not sign. The form doesn't ask for your name or email, and only I read what you send.</p>
+      </div>
+      <form id="anonForm" class="msg-form" novalidate>
+        <label for="anonMsg" class="sr">Your message</label>
+        <textarea id="anonMsg" name="message" rows="5" maxlength="2000" placeholder="Write your message here…" required></textarea>
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="msg-row">
+          <span class="count" id="anonCount">0 / 2000</span>
+          <button class="btn primary" type="submit" id="anonSend">./send-anonymously</button>
+        </div>
+        <p class="msg-status" id="anonStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer><div class="wrap"><span>© <span id="yr"></span> Omar Ehab Einshouka</span><span class="mono">built with HTML, CSS &amp; a little JS</span></div></footer>
+<footer><div class="wrap"><span>© <span id="yr"></span> Omar Ehab Einshouka</span></div></footer>
 
 <a class="totop" id="totop" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 <div class="lb" id="lb"><img alt=""></div>
@@ -434,7 +450,7 @@ document.querySelectorAll('[data-links]').forEach(el=>{
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 /* typed role */
-const roles = ['Cybersecurity Engineer','CTF Player','Attack Surface Explorer'];
+const roles = ['Cybersecurity Engineer','Penetration Tester','CTF Player'];
 const t = document.getElementById('typed');
 if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
   let r = 0, c = roles[0].length, del = true;
@@ -585,6 +601,51 @@ document.querySelectorAll('dialog.pd').forEach(d => {
   document.addEventListener('visibilitychange', () => {
     if (still) return;
     if (document.hidden) cancelAnimationFrame(raf); else raf = requestAnimationFrame(draw);
+  });
+})();
+
+/* experience timeline: the line fills down to where you are reading */
+(() => {
+  const tl = document.querySelector('.tl'); if (!tl) return;
+  const items = [...tl.querySelectorAll('.tl-item')];
+  let tick = false;
+  const update = () => {
+    const r = tl.getBoundingClientRect(), mark = innerHeight * .55;
+    const fill = Math.max(0, Math.min(r.height - 16, mark - r.top - 8));
+    tl.style.setProperty('--tlp', fill + 'px');
+    items.forEach(it => it.classList.toggle('on', it.getBoundingClientRect().top + 29 <= mark));
+    tick = false;
+  };
+  addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+})();
+
+/* anonymous message: sent through Web3Forms to Omar's inbox; no name or email is asked for */
+(() => {
+  const ACCESS_KEY = '';   // paste the Web3Forms access key here
+  const form = document.getElementById('anonForm'); if (!form) return;
+  const box = document.getElementById('anonMsg'), count = document.getElementById('anonCount'),
+        status = document.getElementById('anonStatus'), send = document.getElementById('anonSend');
+  const say = (text, cls) => { status.textContent = text; status.className = 'msg-status ' + (cls || ''); };
+  box.addEventListener('input', () => { count.textContent = box.value.length + ' / 2000'; });
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const text = box.value.trim();
+    if (text.length < 3) { say('Write a message first.', 'err'); box.focus(); return; }
+    if (form.botcheck.checked) return;
+    if (!ACCESS_KEY) { say('Anonymous messages are not connected yet. Please use email or LinkedIn for now.', 'err'); return; }
+    send.disabled = true; say('Sending...');
+    try {
+      const r = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ access_key: ACCESS_KEY, subject: 'Anonymous message from your portfolio', from_name: 'Anonymous visitor', message: text })
+      });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.success !== false) { form.reset(); count.textContent = '0 / 2000'; say('Sent. Thank you for your message.', 'ok'); }
+      else say('The message could not be sent. Please try again in a moment.', 'err');
+    } catch (err) { say('No connection. Check your internet and try again.', 'err'); }
+    finally { send.disabled = false; }
   });
 })();
 

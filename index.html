@@ -262,22 +262,39 @@
 <dialog class="pd" id="pd-cybervault" aria-labelledby="pd-cybervault-t">
   <div class="pd-head"><div><span class="tagx info">PERSONAL PROJECT</span><h3 id="pd-cybervault-t">CyberVault</h3></div><button class="pd-x" type="button" aria-label="Close">×</button></div>
   <div class="pd-body">
-    <p>A local-first web app for keeping penetration-testing knowledge and running practice engagements. Notes are organised as Domain → Category → Topic with Markdown, code, Mermaid and Excalidraw blocks, and the whole library is shown as a mind map. Case studies have a live network map whose changes are logged with timestamps, and a one-click PDF report.</p>
-    <ul class="feat">
-      <li><b>Interactive network map</b> with 19 device types, ports, statuses and attack paths, plus nmap-style paste for ports.</li>
-      <li><b>Automatic activity log:</b> press Start case, and every later change is recorded with the time.</li>
-      <li><b>PDF report export</b> with selectable sections, a live preview and a landscape map page.</li>
-      <li><b>Knowledge map</b> and full-text search on Ctrl+K (SQLite FTS5).</li>
-      <li><b>Security by design:</b> loopback-only server, Host allow-list against DNS rebinding, strict CSP.</li>
-    </ul>
-    <p><b>My role:</b> designed and built it end to end.</p>
-    <div class="pd-shots">
-      <a href="assets/cybervault/04-case-map.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/04-case-map.jpg" alt="Network map with the activity log" loading="lazy"></a>
-      <a href="assets/cybervault/05-pdf-export.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/05-pdf-export.jpg" alt="PDF export with a live preview" loading="lazy"></a>
-      <a href="assets/cybervault/03-topic.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/03-topic.jpg" alt="A topic page on SQL injection" loading="lazy"></a>
-      <a href="assets/cybervault/01-knowledge-map.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/01-knowledge-map.jpg" alt="The knowledge map" loading="lazy"></a>
+    <p>Every engagement teaches you something, and most of it ends up scattered across notes you never find again. CyberVault keeps it all in one place on your own machine, built around three things: what you know, how you test, and the case you're working on right now.</p>
+
+    <h4 class="pd-h">1 · The library</h4>
+    <p>A home for everything you learn. Add a domain for each area of study, break it into topics, and write your notes in any topic, with code, commands, diagrams and screenshots living together. Tag topics with hashtags, star the ones you keep coming back to, and the information you need is always a click away. The <b>knowledge map</b> turns the whole library into one visual mind map, so you see everything you know at a glance instead of digging through folders.</p>
+    <figure class="pd-fig">
+      <img src="assets/cybervault/cybervault-knowledge-map.gif" width="900" height="562" alt="Walkthrough: zooming into a domain on the knowledge map, opening the nmap topic and scrolling its notes" loading="lazy">
+      <figcaption>From the knowledge map into a topic: pick a domain, open a topic, and read its notes and commands.</figcaption>
+    </figure>
+    <div class="pd-shots two">
+      <a href="assets/cybervault/03-topic.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/03-topic.jpg" alt="A topic page with notes, code and a diagram" loading="lazy"></a>
+      <a href="assets/cybervault/01-knowledge-map.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/01-knowledge-map.jpg" alt="The knowledge map: the whole library as a mind map" loading="lazy"></a>
     </div>
-    <p class="cap">Screenshots and the sample report use demo lab data only.</p>
+
+    <h4 class="pd-h">2 · Methodologies</h4>
+    <p>A checklist for every kind of test. Build a methodology once, for a web app, a network, an AWS review or anything else you run, and reuse it on every engagement so nothing is skipped. Each checklist is fully yours to customise: add, remove and reorder items as your process grows. It is the difference between testing from memory and testing the same thorough way every time.</p>
+    <figure class="pd-fig">
+      <img src="assets/cybervault/cybervault-checklists.gif" width="960" height="600" alt="Walkthrough: opening the AWS checklist, starting a run for a target and ticking items off" loading="lazy">
+      <figcaption>Start a run of a checklist for a target and tick items off as you go; each section shows its progress.</figcaption>
+    </figure>
+
+    <h4 class="pd-h">3 · Case studies</h4>
+    <p>Where you run the engagement itself. Set the scenario, press Start, and every step you take is written to an <b>action log</b> as you go. The <b>network map</b> is your draft board for the target: drop in every host, service and finding, draw the attack paths between them, and pin notes anywhere on the board to think out loud. When you are done, CyberVault pulls the whole case, every action and every finding, into one clean report that makes the engagement clear at a glance, and saves it. That is what keeps all the cases you are working on organised instead of living in your head.</p>
+    <figure class="pd-fig">
+      <img src="assets/cybervault/cybervault-case-study.gif" width="960" height="600" alt="Walkthrough: a case's network map with its activity log, a device's details, a sticky note, then the PDF report" loading="lazy">
+      <figcaption>A case in progress: the network map with its activity log, a device's details and a note, then the report export.</figcaption>
+    </figure>
+    <div class="pd-shots two">
+      <a href="assets/cybervault/04-case-map.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/04-case-map.jpg" alt="The network map with the action log beside it" loading="lazy"></a>
+      <a href="assets/cybervault/05-pdf-export.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/05-pdf-export.jpg" alt="The case report with actions and findings" loading="lazy"></a>
+    </div>
+
+    <p>For a pentester that is the whole workflow in one place: study it, standardise it, and run it. Your knowledge compounds instead of leaking away, and every new target starts from everything you have already learned.</p>
+    <p class="cap">Screenshots, walkthroughs and the sample report use practice lab data only.</p>
     <div class="plinks"><a class="btn primary" href="assets/cybervault/CyberVault-sample-case-report.pdf" target="_blank" rel="noopener">View sample report</a></div>
   </div>
 </dialog>

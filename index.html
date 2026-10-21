@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/v3.css?v=15">
+<link rel="stylesheet" href="assets/v3.css?v=16">
 </head>
 <body>
 <canvas id="bgfx" aria-hidden="true"></canvas><div class="bg-glow a" aria-hidden="true"></div><div class="bg-glow b" aria-hidden="true"></div>
@@ -525,18 +525,18 @@ document.querySelectorAll('dialog.pd').forEach(d => {
   const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let W = 0, H = 0, dpr = 1, nodes = [], raf = 0;
   const mouse = { x: -9999, y: -9999 };
-  const LINK = 155;
+  const LINK = 148;
   const packets = [];
   function size() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = innerWidth; H = innerHeight;
     cv.width = W * dpr; cv.height = H * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.min(105, Math.round(W * H / 16000));
+    const n = Math.min(92, Math.round(W * H / 18000));
     nodes = Array.from({ length: n }, () => ({
       x: Math.random() * W, y: Math.random() * H,
-      vx: (Math.random() - .5) * .4, vy: (Math.random() - .5) * .4,
-      r: Math.random() * 1.6 + .7, ph: Math.random() * 6.28
+      vx: (Math.random() - .5) * .32, vy: (Math.random() - .5) * .32,
+      r: Math.random() * 1.5 + .65, ph: Math.random() * 6.28
     }));
   }
   function draw() {
@@ -553,17 +553,17 @@ document.querySelectorAll('dialog.pd').forEach(d => {
       for (let j = i + 1; j < nodes.length; j++) {
         const b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
         if (d < LINK) {
-          ctx.strokeStyle = `rgba(88,166,255,${(1 - d / LINK) * .24})`;
-          if (!still && Math.random() < .0004 && packets.length < 8) packets.push({ a, b, t: 0 });
+          ctx.strokeStyle = `rgba(88,166,255,${(1 - d / LINK) * .2})`;
+          if (!still && Math.random() < .0002 && packets.length < 5) packets.push({ a, b, t: 0 });
           ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
         }
       }
       const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
-      if (md < 200) {
-        ctx.strokeStyle = `rgba(121,184,255,${(1 - md / 200) * .45})`;
+      if (md < 190) {
+        ctx.strokeStyle = `rgba(121,184,255,${(1 - md / 190) * .4})`;
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
       }
-      a.ph += .03; const glow = .5 + Math.sin(a.ph) * .2;
+      a.ph += .03; const glow = .5 + Math.sin(a.ph) * .12;
       ctx.fillStyle = `rgba(121,184,255,${glow})`;
       ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
     }
@@ -571,9 +571,9 @@ document.querySelectorAll('dialog.pd').forEach(d => {
       const k = packets[i]; k.t += .02;
       if (k.t >= 1 || Math.hypot(k.a.x - k.b.x, k.a.y - k.b.y) > LINK) { packets.splice(i, 1); continue; }
       const x = k.a.x + (k.b.x - k.a.x) * k.t, y = k.a.y + (k.b.y - k.a.y) * k.t;
-      ctx.fillStyle = 'rgba(160,205,255,.8)';
-      ctx.shadowColor = 'rgba(88,166,255,.7)'; ctx.shadowBlur = 6;
-      ctx.beginPath(); ctx.arc(x, y, 1.9, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = 'rgba(160,205,255,.7)';
+      ctx.shadowColor = 'rgba(88,166,255,.6)'; ctx.shadowBlur = 5;
+      ctx.beginPath(); ctx.arc(x, y, 1.7, 0, Math.PI * 2); ctx.fill();
       ctx.shadowBlur = 0;
     }
     if (!still) raf = requestAnimationFrame(draw);

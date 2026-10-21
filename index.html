@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/v3.css?v=20">
+<link rel="stylesheet" href="assets/v3.css?v=21">
 </head>
 <body>
 <canvas id="bgfx" aria-hidden="true"></canvas><div class="bg-glow a" aria-hidden="true"></div><div class="bg-glow b" aria-hidden="true"></div>
@@ -152,6 +152,10 @@
     <div class="sec-head reveal"><div><p class="kicker">$ ls ~/projects/</p><h2>Projects</h2></div><p>Select a project to see the details.</p></div>
     <p class="swipe-hint" aria-hidden="true">Swipe to see more projects <span>→</span></p>
     <div class="pgrid">
+      <button class="pcard reveal" type="button" data-open="pd-cybervault">
+        <span class="pimg"><img src="assets/cybervault/04-case-map.jpg" alt="CyberVault network map of a practice lab" loading="lazy"></span>
+        <span class="pmeta"><span class="tagx info">PERSONAL</span><b>CyberVault</b><span class="pdesc">A pentest knowledge vault and case-study tracker: map the target network, log every step, export a PDF report.</span><span class="go">View details →</span></span>
+      </button>
       <button class="pcard reveal" type="button" data-open="pd-crm">
         <span class="pimg"><img src="assets/10-admin-1-dashboard.jpg" alt="The A97 CRM admin dashboard" loading="lazy"></span>
         <span class="pmeta"><span class="tagx crit">A97 · LIVE</span><b>A97 CRM</b><span class="pdesc">A real estate CRM where several sales agents work the same lead and the admin sees every step.</span><span class="go">View details →</span></span>
@@ -168,10 +172,6 @@
         <span class="pimg noimg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><small>Internal app with private company data</small></span>
         <span class="pmeta"><span class="tagx info">A97 · IN USE</span><b>A97 Finance Tracker</b><span class="pdesc">A private finance app for the company's income, expenses and debts.</span><span class="go">View details →</span></span>
       </button>
-      <button class="pcard reveal" type="button" data-open="pd-cybervault">
-        <span class="pimg"><img src="assets/cybervault/04-case-map.jpg" alt="CyberVault network map of a practice lab" loading="lazy"></span>
-        <span class="pmeta"><span class="tagx info">PERSONAL</span><b>CyberVault</b><span class="pdesc">A pentest knowledge vault and case-study tracker: map the target network, log every step, export a PDF report.</span><span class="go">View details →</span></span>
-      </button>
     </div>
   </div>
 </section>
@@ -181,6 +181,10 @@
   <div class="pd-head"><div><span class="tagx crit">A97 · LIVE · 30 SECURITY FIXES</span><h3 id="pd-crm-t">A97 CRM</h3></div><button class="pd-x" type="button" aria-label="Close">×</button></div>
   <div class="pd-body">
     <p>In real estate a good lead rarely belongs to one agent, but most CRMs keep a single status per lead, so each update erases the last. In this CRM each sales agent keeps a private pipeline on the lead, and the admin sees all of them side by side.</p>
+    <figure class="pd-fig">
+      <img src="assets/crm/crm-demo.gif" alt="A 20-second walkthrough of the CRM: adding a lead, assigning it, logging a call, the competition between agents, the dashboard and performance" loading="lazy" width="960" height="600">
+      <figcaption>20-second walkthrough: add a lead, assign it, call it, the competition between agents, the dashboard and performance. Real app screens with sample data.</figcaption>
+    </figure>
     <ul class="feat">
       <li><b>Many agents, one lead.</b> An 11-step feedback pipeline from New to Contract signed. Signing closes the lead for everyone.</li>
       <li><b>Each role sees only what it needs.</b> Sales can't see who brought the lead in or who else is working it.</li>
@@ -188,7 +192,12 @@
       <li><b>Full traceability.</b> An audit trail nobody can edit, sales performance and win rates, and team leaders who run their teams.</li>
       <li><b>Hardened.</b> A security audit found and fixed 30 issues, including an account-takeover chain.</li>
     </ul>
-    <div class="stack"><span>Node.js</span><span>Express</span><span>SQLite</span><span>Vanilla JS</span><span>Docker</span><span>Render</span></div>
+    <h4 class="pd-h">Architecture</h4>
+    <figure class="pd-fig">
+      <a href="assets/crm/architecture.jpg" target="_blank" rel="noopener"><img src="assets/crm/architecture.jpg" alt="The architecture of the A97 CRM: one program on one server with one database file, six checks on every request" loading="lazy"></a>
+      <figcaption>One program on one server, talking to one database file. Every request passes six checks, including who you are and what your role may see, before it touches any data.</figcaption>
+    </figure>
+    <h4 class="pd-h">Screens</h4>
     <div class="pd-shots">
       <a href="assets/12-admin-3-agents-on-one-lead.jpg" target="_blank" rel="noopener"><img src="assets/12-admin-3-agents-on-one-lead.jpg" alt="One lead with three agents at different steps" loading="lazy"></a>
       <a href="assets/14-admin-5-performance.jpg" target="_blank" rel="noopener"><img src="assets/14-admin-5-performance.jpg" alt="Sales performance for every agent" loading="lazy"></a>
@@ -326,7 +335,7 @@
 <!-- WRITING -->
 <section id="writing" class="band">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ ls articles/</p><h2>Articles</h2></div><p>Follow <a href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">@omareinshouka2001</a> for new write-ups on what I build and break.</p></div>
+    <div class="sec-head reveal"><div><p class="kicker">$ ls articles/</p><h2>Articles</h2></div><p><a href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">Click here</a> to see more write-ups and articles on Medium.</p></div>
     <div class="agrid">
       <a class="acard reveal" href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">
         <span class="aimg"><img src="assets/01b-the-pipeline-feedback.jpg" alt="The CRM's eleven-step pipeline feedback" loading="lazy"></span>

@@ -468,3 +468,13 @@ dialog.pd::backdrop{background:rgba(1,4,9,.78);backdrop-filter:blur(3px)}
 .pd-video{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);background:#0f141b}
 
 .pd-video.fin{aspect-ratio:1280/760}
+
+/* step-by-step screenshots in a pop-up */
+.steps3{display:grid;gap:16px;margin:4px 0 10px}
+.steps3 figure{position:relative;margin:0;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.steps3 img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);transition:transform .3s var(--ease)}
+.steps3 a:hover img{transform:scale(1.015)}
+.steps3 figcaption{color:var(--muted);font-size:14.5px;line-height:1.55}
+.steps3 figcaption b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+.step-no{position:absolute;top:-10px;left:-10px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--fill);color:#fff;font:700 13px var(--mono);box-shadow:0 0 0 4px var(--surface)}
+@media (max-width:640px){.steps3 figure{grid-template-columns:minmax(0,1fr)}}

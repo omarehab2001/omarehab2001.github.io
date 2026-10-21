@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/v3.css?v=23">
+<link rel="stylesheet" href="assets/v3.css?v=24">
 </head>
 <body>
 <canvas id="bgfx" aria-hidden="true"></canvas><div class="bg-glow a" aria-hidden="true"></div><div class="bg-glow b" aria-hidden="true"></div>
@@ -222,19 +222,22 @@
 <dialog class="pd" id="pd-leads" aria-labelledby="pd-leads-t">
   <div class="pd-head"><div><span class="tagx ok">A97 · 74 TESTS</span><h3 id="pd-leads-t">A97 Lead Generator</h3></div><button class="pd-x" type="button" aria-label="Close">×</button></div>
   <div class="pd-body">
-    <p>Staff add leads, and buyers browse them for free: area, project, unit, budget and payment plan. They spend points to unlock the client's name, full number and notes. Each lead is sold once: the buyer who unlocks it owns it, and it leaves everyone else's list.</p>
+    <p>A marketplace where real estate brokers buy fresh leads. Browsing is free: every lead shows the area, project, unit, budget and payment plan. Spend points to unlock the client's name, number and notes, and the lead becomes yours alone.</p>
     <ul class="feat">
-      <li><b>Nothing for sale leaves the server early.</b> The browse list never contains the name, phone or notes, and tests check every response.</li>
-      <li><b>A balance is its history.</b> Points live only in a ledger of top-ups, unlocks, refunds and corrections.</li>
-      <li><b>Race-proof.</b> Two buyers pressing Unlock at once can't both get the lead, and the second isn't charged.</li>
-      <li><b>Fair refunds.</b> Buyers report a wrong number within 48 hours, and staff refund it or reject it with a reason.</li>
-      <li><b>Attack-tested:</b> forged tokens, role escalation, SQL injection, stored XSS and double refunds.</li>
+      <li><b>Browse free, pay per lead.</b> Filter by area, project, unit type, budget and how fresh the lead is.</li>
+      <li><b>Points through billing.</b> Buyers pay the billing team, staff add the points with a receipt reference, and the buyer is notified.</li>
+      <li><b>Every lead is sold once.</b> Unlocking makes it yours and removes it for every other buyer, even if two people press Unlock at the same moment.</li>
+      <li><b>Wrong-number protection.</b> Report a lead within 48 hours, and the points come back once it's confirmed.</li>
+      <li><b>Every point is traceable</b> in a ledger of top-ups, unlocks, refunds and corrections.</li>
+      <li><b>Secure by design.</b> Contact details never leave the server before purchase, and the app is tested against forged tokens, role escalation, SQL injection and XSS.</li>
     </ul>
-    <div class="pd-shots two">
-      <a href="assets/leadgen/browse.jpg" target="_blank" rel="noopener"><img src="assets/leadgen/browse.jpg" alt="Buyer view: leads for sale with the contact hidden until unlocked" loading="lazy"></a>
-      <a href="assets/leadgen/staff-overview.jpg" target="_blank" rel="noopener"><img src="assets/leadgen/staff-overview.jpg" alt="Staff overview: leads for sale, sales and points" loading="lazy"></a>
+    <h4 class="pd-h">how-it-works</h4>
+    <div class="steps3">
+      <figure><span class="step-no">1</span><a href="assets/leadgen/get-points.jpg" target="_blank" rel="noopener"><img src="assets/leadgen/get-points.jpg" alt="A buyer without enough points sees the billing contact to buy points" loading="lazy"></a><figcaption><b>Get points.</b> Not enough points? The app shows how to buy them from the billing team.</figcaption></figure>
+      <figure><span class="step-no">2</span><a href="assets/leadgen/buy-lead.jpg" target="_blank" rel="noopener"><img src="assets/leadgen/buy-lead.jpg" alt="Confirming the purchase of a lead for 60 points" loading="lazy"></a><figcaption><b>Buy a lead.</b> Confirm the price. The lead is sold once and becomes yours alone.</figcaption></figure>
+      <figure><span class="step-no">3</span><a href="assets/leadgen/unlocked-lead.jpg" target="_blank" rel="noopener"><img src="assets/leadgen/unlocked-lead.jpg" alt="The unlocked lead with the client's name, number and full details" loading="lazy"></a><figcaption><b>The unlocked lead.</b> The client's name, number, needs and notes, with one tap to call or WhatsApp.</figcaption></figure>
     </div>
-    <p class="cap">Real screenshots of the app running on demo data.</p>
+    <p class="cap">Real screenshots of the app on demo data. Phone numbers are replaced with 0100 000 0000.</p>
   </div>
 </dialog>
 

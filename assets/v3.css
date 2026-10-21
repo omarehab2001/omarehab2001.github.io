@@ -466,3 +466,5 @@ dialog.pd::backdrop{background:rgba(1,4,9,.78);backdrop-filter:blur(3px)}
 .pd-h{margin:18px 0 8px;font:600 13px var(--mono);color:var(--accent)}
 .pd-h::before{content:"$ cat "}
 .pd-video{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);background:#0f141b}
+
+.pd-video.fin{aspect-ratio:1280/760}

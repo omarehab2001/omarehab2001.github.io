@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/v3.css?v=22">
+<link rel="stylesheet" href="assets/v3.css?v=23">
 </head>
 <body>
 <canvas id="bgfx" aria-hidden="true"></canvas><div class="bg-glow a" aria-hidden="true"></div><div class="bg-glow b" aria-hidden="true"></div>
@@ -169,7 +169,7 @@
         <span class="pmeta"><span class="tagx ok">A97 · MARKETPLACE</span><b>A97 Lead Generator</b><span class="pdesc">A web platform that sells fresh real estate leads to brokers for points. Each lead is sold once.</span><span class="go">View details →</span></span>
       </button>
       <button class="pcard reveal" type="button" data-open="pd-finance">
-        <span class="pimg noimg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg><small>Internal app with private company data</small></span>
+        <span class="pimg"><img src="assets/finance/finance-walkthrough-poster.jpg" alt="The A97 Finance Tracker overview with sample data" loading="lazy"></span>
         <span class="pmeta"><span class="tagx info">A97 · IN USE</span><b>A97 Finance Tracker</b><span class="pdesc">A private finance app for the company's income, expenses and debts.</span><span class="go">View details →</span></span>
       </button>
     </div>
@@ -212,7 +212,6 @@
       <li><b>Tools for buyers:</b> a mortgage calculator, an AI chatbot, favourites, saved searches with email alerts, and reviews.</li>
       <li><b>Secure by design:</b> password reset by one-time code that never reveals which emails exist, and sign-out on every device.</li>
     </ul>
-    <div class="stack"><span>Laravel</span><span>Sanctum</span><span>REST API</span><span>Role-based access</span><span>Postman</span></div>
     <div class="pd-shots one">
       <a href="assets/infinity/home.jpg" target="_blank" rel="noopener"><img src="assets/infinity/home.jpg" alt="The a97homes.com homepage" loading="lazy"></a>
     </div>
@@ -231,7 +230,6 @@
       <li><b>Fair refunds.</b> Buyers report a wrong number within 48 hours, and staff refund it or reject it with a reason.</li>
       <li><b>Attack-tested:</b> forged tokens, role escalation, SQL injection, stored XSS and double refunds.</li>
     </ul>
-    <div class="stack"><span>Node.js</span><span>Express</span><span>SQLite</span><span>JWT + bcrypt</span><span>Strict CSP</span><span>Docker</span></div>
     <div class="pd-shots two">
       <a href="assets/leadgen/browse.jpg" target="_blank" rel="noopener"><img src="assets/leadgen/browse.jpg" alt="Buyer view: leads for sale with the contact hidden until unlocked" loading="lazy"></a>
       <a href="assets/leadgen/staff-overview.jpg" target="_blank" rel="noopener"><img src="assets/leadgen/staff-overview.jpg" alt="Staff overview: leads for sale, sales and points" loading="lazy"></a>
@@ -244,6 +242,10 @@
   <div class="pd-head"><div><span class="tagx info">A97 · IN USE</span><h3 id="pd-finance-t">A97 Finance Tracker</h3></div><button class="pd-x" type="button" aria-label="Close">×</button></div>
   <div class="pd-body">
     <p>The first product I built at A97. It gave management one trusted place to record every transaction and see where the money goes, in place of scattered notes and spreadsheets.</p>
+    <figure class="pd-fig">
+      <video class="pd-video fin" src="assets/finance/finance-walkthrough.mp4" poster="assets/finance/finance-walkthrough-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="A short walkthrough of the A97 Finance Tracker"></video>
+      <figcaption>A quick walkthrough: adding income, the six-month overview, a debt with its payments, and filtering transactions. Sample data only, not the company's real figures.</figcaption>
+    </figure>
     <ul class="feat">
       <li><b>Income and expenses</b> by category, with search, date filters and a chart of the top spending categories.</li>
       <li><b>Debts both ways,</b> owed and owing, with due dates, partial payments and overdue flags.</li>
@@ -251,8 +253,6 @@
       <li><b>Invite-only access</b> with admin and editor roles.</li>
       <li><b>Export to CSV and Excel,</b> plus backup and restore scripts.</li>
     </ul>
-    <div class="stack"><span>Node.js</span><span>Express</span><span>MongoDB Atlas</span><span>Chart.js</span><span>JWT + bcrypt</span></div>
-    <p class="cap">No screenshots: the app holds the company's private financial data.</p>
   </div>
 </dialog>
 
@@ -268,7 +268,6 @@
       <li><b>Security by design:</b> loopback-only server, Host allow-list against DNS rebinding, strict CSP.</li>
     </ul>
     <p><b>My role:</b> designed and built it end to end.</p>
-    <div class="stack"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS 4</span><span>React Flow</span><span>Fastify 5</span><span>Node 24</span><span>SQLite FTS5</span></div>
     <div class="pd-shots">
       <a href="assets/cybervault/04-case-map.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/04-case-map.jpg" alt="Network map with the activity log" loading="lazy"></a>
       <a href="assets/cybervault/05-pdf-export.jpg" target="_blank" rel="noopener"><img src="assets/cybervault/05-pdf-export.jpg" alt="PDF export with a live preview" loading="lazy"></a>

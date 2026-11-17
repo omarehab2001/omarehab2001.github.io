@@ -1,0 +1,167 @@
+/* Pharaonic theme, loaded after v3.css: gold on neutral black, with lapis, turquoise and carnelian inlays.
+   Glyphs come from Noto Sans Egyptian Hieroglyphs (subset in index.html) and are written as CSS escapes. */
+:root{
+  color-scheme: dark;
+  --bg:#020202; --surface:#0A0A0A; --surface-2:#111111; --line:#212121; --line-2:#343434;
+  --ink:#F7EDD3; --ink-2:#DED5BC; --muted:#A39676;
+  --accent:#E4BE50; --accent-ink:#F0D06C; --accent-rgb:228,190,80;
+  --accent-soft:rgba(228,190,80,.13); --accent-line:rgba(228,190,80,.48);
+  --fill:#DDB540; --fill-hover:#EBC95A; --fill-rgb:221,181,64; --on-fill:#17120A;
+  --green:#45C4B4; --purple:#AAB9FF; --purple-rgb:170,185,255;
+  --red:#F0806A; --red-soft:rgba(201,76,52,.2);
+  --orange:#EFA35F; --orange-soft:rgba(224,130,60,.17); --orange-line:rgba(239,163,95,.42);
+  --blue:#56C7B8;
+  --lapis:#2E55C8; --turq:#2FA39A; --carnelian:#B5432E;
+  --frame:#000000; --nav-bg:rgba(2,2,2,.92); --band-bg:rgba(9,9,9,.6); --scrim:rgba(0,0,0,.92);
+  --glow-a:#DDB540; --glow-b:#DDB540; --glow-a-o:.035; --glow-b-o:.015;
+  --place:#F8E9A8; --place-shadow:0 0 30px rgba(228,190,80,.5);
+  --name-grad:linear-gradient(180deg,#FAEBA2 0%,#E4BE50 48%,#A8842A 100%);
+  --foil:linear-gradient(180deg,#F3D878 0%,#DDB540 52%,#BB9126 100%);
+  --card-edge:inset 0 1px 0 rgba(228,190,80,.2);
+  --fx-rgb:228,190,80; --fx-hi-rgb:244,216,124; --fx-pk-rgb:255,238,176; --fx-star:1; --fx-alpha:.6;
+  --display:"Cinzel","Trajan Pro",Georgia,serif;
+  --display-2:"Cinzel Decorative","Cinzel","Trajan Pro",Georgia,serif;
+  --hiero:"Noto Sans Egyptian Hieroglyphs","Segoe UI Historic",sans-serif;
+  --radius:6px;
+  /* royal formulae for the side inscriptions: King of Upper and Lower Egypt, Lord of the Two Lands,
+     given life, stability and dominion, Son of Ra, life, prosperity, health */
+  --insc-a:"\131D3\133CF\131A4\133CF\1339F\131FE\131FE\13080\133D9\132F9\132BD\13300\1316D\131F3\132F9\13351\132F4\131A3";
+  --insc-b:"\1316D\131F3\132F9\13351\132F4\13143\131D3\133CF\131A4\133CF\133D9\132F9\132BD\13300\1339F\131FE\131FE\13197";
+}
+::selection{background:var(--fill);color:var(--on-fill)}
+
+/* ---------- inscribed columns down both sides, on wide screens ---------- */
+@media (min-width:1360px){
+  body::before,body::after{position:fixed;top:78px;bottom:18px;width:40px;z-index:-1;pointer-events:none;overflow:hidden;
+    writing-mode:vertical-rl;text-orientation:upright;font:400 22px/40px var(--hiero);letter-spacing:.4em;white-space:nowrap;
+    color:rgba(var(--accent-rgb),.36);border-left:1px solid rgba(var(--accent-rgb),.3);border-right:1px solid rgba(var(--accent-rgb),.3)}
+  body::before{content:var(--insc-a) var(--insc-a) var(--insc-a);left:calc(50% - 540px - 100px)}
+  body::after{content:var(--insc-b) var(--insc-b) var(--insc-b);right:calc(50% - 540px - 100px)}
+}
+
+/* ---------- type: carved capitals for names and titles ---------- */
+h2{font:700 clamp(23px,3vw,32px)/1.2 var(--display);letter-spacing:.012em}
+.msg-intro h2{font-size:clamp(21px,2.6vw,27px)}
+.cp-card .num,.stats b{font-family:var(--display);letter-spacing:.01em}
+/* a gold rule with a lapis-and-turquoise bead under each section title */
+.sec-head > div::after{content:"";width:132px;height:10px;margin-top:11px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 132 10'%3E%3Cpath d='M0 5h49M83 5h49' stroke='%23E4BE50' stroke-width='1.4'/%3E%3Cpath d='M66 .8 70.2 5 66 9.2 61.8 5z' fill='%23E4BE50'/%3E%3Ccircle cx='55' cy='5' r='1.7' fill='%232FA39A'/%3E%3Ccircle cx='77' cy='5' r='1.7' fill='%232FA39A'/%3E%3C/svg%3E") left center/contain no-repeat}
+
+/* ---------- top bar: nemes stripes, and the name in a cartouche ---------- */
+header.nav{background:var(--nav-bg)}
+header.nav::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:repeating-linear-gradient(90deg,#E4BE50 0 16px,#2E55C8 16px 28px)}
+.brand{position:relative;gap:9px;padding:5px 15px 5px 11px;border:1.5px solid var(--accent);border-radius:999px;font:700 13px var(--display);letter-spacing:.07em}
+.brand::before{content:"\13080";font:400 19px/1 var(--hiero);letter-spacing:0;margin-top:-2px}
+.brand::after{content:"";position:absolute;right:-8px;top:2px;bottom:2px;width:2.5px;border-radius:2px;background:var(--accent)}
+.progress{background:linear-gradient(90deg,var(--turq),var(--fill))}
+
+/* the painted block border that frames tomb scenes */
+section.band{position:relative;background:var(--band-bg)}
+section.band::before,section.band::after{content:"";position:absolute;left:0;right:0;height:6px;opacity:.9;background:repeating-linear-gradient(90deg,
+  #E4BE50 0 22px,var(--bg) 22px 25px,#2E55C8 25px 47px,var(--bg) 47px 50px,
+  #2FA39A 50px 72px,var(--bg) 72px 75px,#B5432E 75px 97px,var(--bg) 97px 100px)}
+section.band::before{top:-1px}
+section.band::after{bottom:-1px}
+
+/* ---------- intro: the royal name in its cartouche, beside the sticker ---------- */
+.eyebrow i{box-shadow:0 0 0 0 rgba(var(--accent-rgb),.5)}
+@keyframes ping{to{box-shadow:0 0 0 8px rgba(var(--accent-rgb),0)}}
+.whoami{margin-bottom:14px}
+h1{position:relative;display:inline-block;margin:0 14px 24px 0;padding:.26em .7em .3em .62em;
+  font:700 clamp(29px,5.3vw,58px)/1.1 var(--display-2);letter-spacing:.015em;
+  border:3px solid var(--accent);border-radius:999px;background:rgba(var(--accent-rgb),.06);
+  box-shadow:inset 0 0 0 3px var(--bg),inset 0 0 0 4.5px rgba(var(--accent-rgb),.55),0 0 34px -12px rgba(var(--accent-rgb),.55)}
+h1::after{content:"";position:absolute;right:-13px;top:9%;bottom:9%;width:5px;border-radius:3px;background:var(--accent)}
+h1 span{background:var(--name-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn:hover{border-color:var(--accent-line)}
+.btn.primary,.contact .btn{background:var(--foil);border-color:#EBCB62;color:var(--on-fill)}
+.btn.primary:hover,.contact .btn:hover{background:linear-gradient(180deg,#F8E28C,#E6C150 52%,#C79C2C);border-color:#F3D878;color:var(--on-fill)}
+.contact .btn.ghost,.contact .btn.ghost:hover{background:var(--bg);border-color:var(--line);color:var(--ink-2)}
+.contact .btn.ghost:hover{border-color:var(--accent-line)}
+.socials a:hover{border-color:var(--accent-line)}
+.hero .wrap{position:relative}
+/* a gold line-art sticker of Anubis */
+.legend{position:absolute;right:24px;top:50%;transform:translateY(-50%);width:min(240px,24vw);margin:0}
+.legend img{display:block;width:100%;height:auto;transform:rotate(-6deg);filter:drop-shadow(0 0 22px rgba(var(--accent-rgb),.28));transition:transform .5s var(--ease)}
+.legend:hover img{transform:rotate(0deg) scale(1.03)}
+@media (max-width:980px){.legend{position:static;transform:none;order:-1;width:96px;margin:0 0 20px}}
+@media (prefers-reduced-motion:reduce){.legend img{transition:none}}
+
+/* ---------- section labels carry a hieroglyph ---------- */
+.kicker::before{font:400 1.45em/1 var(--hiero);margin-right:.55em;vertical-align:-.16em;color:var(--accent-ink)}
+#education .kicker::before{content:"\133DE"}
+#awards .kicker::before{content:"\132DE"}
+#experience .kicker::before{content:"\132BD"}
+#projects .kicker::before{content:"\13274"}
+#certs .kicker::before{content:"\131A3"}
+#skills .kicker::before{content:"\13184"}
+#writing .kicker::before{content:"\133DB"}
+#contact .kicker::before{content:"\1308B"}
+#message .kicker::before{content:"\13153"}
+
+/* ---------- cards: squared stone blocks with a gilded top edge ---------- */
+.award,.cp-card,.edu,.tl-card,.cert,.skill,.article,.pcard,.ctile,.acard,.msg,.contact,.cert-main{box-shadow:var(--card-edge)}
+.cp-card:hover,.cert:hover,.skill:hover,.tl-card:hover{border-color:var(--accent-line)}
+.pcard,.ctile,.acard,.project,dialog.pd{border-radius:var(--radius)}
+.tagx.info{background:rgba(var(--purple-rgb),.13)}
+.pill.sig{border-color:var(--orange-line)}
+.project .media,.article .img,.pimg,.aimg,.pd-fig img,.pd-video,.map{background:var(--frame)}
+.lead-card .price,.pin.hot,.totop,.step-no{color:var(--on-fill)}
+.totop{background:var(--foil)}
+.lb{background:var(--scrim)}
+dialog.pd::backdrop{background:var(--scrim)}
+.msg-status.ok{color:var(--green)}
+/* a striped cornice along the top of the large panels */
+.contact,.msg{position:relative;overflow:hidden}
+.contact::before,.msg::before,dialog.pd::before{content:"";height:6px;background:repeating-linear-gradient(90deg,
+  #E4BE50 0 5px,#2E55C8 5px 10px,#E4BE50 10px 15px,#2FA39A 15px 20px,#E4BE50 20px 25px,#B5432E 25px 30px)}
+.contact::before,.msg::before{position:absolute;left:0;right:0;top:0}
+dialog.pd::before{flex:none}
+
+/* ---------- experience: ankhs down the column ---------- */
+.tl::before{width:2px;background:linear-gradient(var(--accent),var(--accent-line) 16%,var(--line-2) 82%,transparent)}
+.tl-item::before,.tl-item:first-child::before{content:"\132F9";left:calc(var(--tlx) - 11px);top:17px;width:24px;height:24px;display:grid;place-items:center;
+  font:400 15px/1 var(--hiero);color:var(--accent);background:var(--bg);border:1px solid var(--accent-line);border-radius:50%;box-shadow:none}
+.tl-item:first-child::before{background:var(--fill);color:var(--on-fill);border-color:var(--fill);box-shadow:0 0 0 4px var(--accent-soft)}
+.tl-item::after{left:calc(var(--tlx) + 13px);width:11px}
+.tl-item{padding-left:42px}
+@media (max-width:600px){.tl-item{padding-left:34px}.tl-item::after{width:8px}}
+
+/* ---------- awards: gold numerals, a star, and the winged sun over the podium ---------- */
+.award{background:linear-gradient(160deg,rgba(var(--fill-rgb),.07),var(--surface) 55%);border-color:rgba(var(--accent-rgb),.3)}
+.award::before{background:radial-gradient(circle,rgba(var(--accent-rgb),.12),transparent 70%)}
+.award .place{font-family:var(--display);font-weight:800;letter-spacing:-.02em;color:var(--place);text-shadow:var(--place-shadow)}
+.award .place sup{font-family:var(--display)}
+.award::after{content:"\131FC";top:16px;right:18px;width:auto;height:auto;background:none;font:400 30px/1 var(--hiero);color:var(--accent);opacity:.85}
+.award:first-child::after{content:"";top:20px;right:18px;width:84px;height:34px;opacity:1;background:var(--accent);
+  -webkit-mask:var(--wings) center/contain no-repeat;mask:var(--wings) center/contain no-repeat}
+:root{--wings:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 34' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='42' cy='14' r='7.5' fill='black'/%3E%3Cpath d='M33 11C22 5 10 5 2 10c9 0 20 3 31 7M33 17c-9 0-18-1-25-3M33 20c-7 2-14 2-20 0M34 23c-5 3-10 4-15 3'/%3E%3Cpath d='M51 11c11-6 23-6 31-1-9 0-20 3-31 7M51 17c9 0 18-1 25-3M51 20c7 2 14 2 20 0M50 23c5 3 10 4 15 3'/%3E%3C/svg%3E")}
+.award:hover{box-shadow:0 18px 40px -22px rgba(var(--fill-rgb),.6)}
+.award:first-child{background:linear-gradient(160deg,rgba(var(--fill-rgb),.16),var(--surface) 60%)}
+
+/* ---------- certificates: a scarab seal ---------- */
+.cert-main{background:linear-gradient(120deg,rgba(var(--fill-rgb),.11),var(--surface) 60%)}
+.cert-main::after{border-color:rgba(var(--accent-rgb),.3)}
+.seal{color:var(--on-fill);background:radial-gradient(circle at 35% 30%,#F6E08A,#C29A2E 62%,#82651A);box-shadow:0 0 0 5px rgba(var(--fill-rgb),.16),0 10px 26px -10px rgba(var(--fill-rgb),.8)}
+.seal svg{display:none}
+.seal::before{content:"\131A3";font:400 36px/1 var(--hiero);color:#1F1708;margin-top:-3px}
+.ctile::after{content:"\131A3";right:14px;top:10px;width:auto;height:auto;background:none;font:400 19px/1 var(--hiero);color:var(--accent);opacity:.8}
+.ctile .issuer{padding-right:26px}
+
+/* ---------- articles, background ---------- */
+.acard.more{background:linear-gradient(160deg,rgba(var(--fill-rgb),.08),var(--surface) 60%)}
+.acard.more .mlogo{color:var(--ink)}
+.bg-glow{opacity:var(--glow-a-o);background:radial-gradient(circle,var(--glow-a) 0%,transparent 68%)}
+.bg-glow.b{opacity:var(--glow-b-o);background:radial-gradient(circle,var(--glow-b) 0%,transparent 68%)}
+
+/* ---------- footer: the pyramids on the horizon ---------- */
+footer{position:relative;padding-top:calc(min(340px,78vw)*.4584 + 26px)}
+footer::before{content:"";position:absolute;left:50%;top:6px;transform:translateX(-50%);width:min(340px,78vw);aspect-ratio:480/220;pointer-events:none;opacity:.75;
+  background:linear-gradient(180deg,var(--accent) 20%,rgba(var(--accent-rgb),.3));
+  -webkit-mask:var(--giza) center/contain no-repeat;mask:var(--giza) center/contain no-repeat}
+footer .wrap{justify-content:center}
+:root{--giza:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 220' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M0 200H480'/%3E%3Cpath d='M150 200 270 60l120 140M270 60l30 140'/%3E%3Cpath d='M30 200l85-95 59.5 66.5M115 105l20 95'/%3E%3Cpath d='M379.9 188.2 420 140l50 60M420 140l12 60'/%3E%3Ccircle cx='404' cy='58' r='24'/%3E%3Cpath d='M366 58h-14M442 58h14M404 20V8M377 31l-9-9M431 31l9-9' stroke-width='1.6'/%3E%3Cpath d='M20 210h70M130 212h110M290 210h60M390 212h80' stroke-width='1.2'/%3E%3C/svg%3E")}
+
+/* ---------- a small flag of Egypt beside the place name ---------- */
+.flag-eg{display:inline-block;width:21px;height:14px;flex:none;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.38);vertical-align:-2px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Cpath fill='%23CE1126' d='M0 0h30v7H0z'/%3E%3Cpath fill='%23fff' d='M0 6.67h30v6.67H0z'/%3E%3Cpath d='M0 13.33h30V20H0z'/%3E%3Cpath fill='%23C09300' d='M15 7.5l1 .9 1.7-.5-.5 3-1 1.3h-2.4l-1-1.3-.5-3 1.7.5z'/%3E%3C/svg%3E") center/cover no-repeat}
+footer .wrap span{display:inline-flex;align-items:center;gap:8px}

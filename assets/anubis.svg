@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" fill="none" stroke="#E4BE50" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <clipPath id="disc"><circle cx="150" cy="150" r="133"/></clipPath>
+    <clipPath id="wig"><path d="M166 94C160 122 156 142 148 162L141 236H228L220 170C220 140 213 110 197 95Z"/></clipPath>
+  </defs>
+
+  <!-- sticker edge -->
+  <circle cx="150" cy="150" r="146" stroke-width="3"/>
+  <circle cx="150" cy="150" r="138.5" stroke-width="1.5" stroke-dasharray="1.5 7" opacity=".85"/>
+
+  <g clip-path="url(#disc)" stroke-width="3.2">
+    <!-- ears -->
+    <path d="M149 99 157 32 173 91 188 36 198 96"/>
+    <path d="M159 54 162 86M187 58 187 88" stroke-width="1.8" opacity=".75"/>
+
+    <!-- brow, long muzzle, jaw and throat -->
+    <path d="M149 99C139 103 131 109 125 115L74 137C65 140 62 146 68 150L112 157C122 160 131 167 137 175 136 200 133 222 126 246"/>
+    <path d="M73 147 106 151" stroke-width="2"/>
+    <circle cx="67.5" cy="143.5" r="3.2" fill="#E4BE50" stroke="none"/>
+
+    <!-- kohl-lined eye -->
+    <path d="M117 115Q131 107 149 112" stroke-width="2.6"/>
+    <path d="M121 124Q131 117 142 123 131 129 121 124ZM142 123 157 120" stroke-width="2.4"/>
+    <circle cx="131" cy="123" r="2.3" fill="#E4BE50" stroke="none"/>
+
+    <!-- striped headcloth -->
+    <path d="M166 94C160 122 156 142 148 162L141 236H228L220 170C220 140 213 110 197 95"/>
+    <g clip-path="url(#wig)" stroke-width="2" opacity=".8">
+      <path d="M130 110H240M130 122H240M130 134H240M130 146H240M130 158H240M130 170H240M130 182H240M130 194H240M130 206H240M130 218H240"/>
+    </g>
+
+    <!-- shoulders and broad collar -->
+    <path d="M126 246 84 276M228 236 268 264"/>
+    <path d="M125 249Q180 268 231 246M111 259Q180 287 244 254M97 270Q180 306 257 263" stroke-width="2.4"/>
+  </g>
+
+  <!-- sparkles -->
+  <g stroke-width="2">
+    <path d="M64 80v16M56 88h16"/><path d="M240 62v12M234 68h12"/><path d="M58 206v10M53 211h10"/>
+  </g>
+</svg>

@@ -15,12 +15,14 @@
 <meta property="og:image:alt" content="The landing page of Omar Ehab Einshouka's portfolio">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://omarehab2001.github.io/assets/og-landing.jpg">
-<meta name="theme-color" content="#0D1117">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D1117'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' fill='%231f6feb' text-anchor='middle'%3EOE%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#020202">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23020202'/%3E%3Cg fill='none' stroke='%23D9B544' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19Q30 7 56 19'/%3E%3Cpath d='M9 31Q30 16 52 29Q30 42 9 31z'/%3E%3Cpath d='M52 29l8-2'/%3E%3Cpath d='M27 40l-2 16'/%3E%3Cpath d='M36 39q5 15 18 10'/%3E%3C/g%3E%3Ccircle cx='30' cy='29.5' r='6' fill='%23D9B544'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Egyptian+Hieroglyphs&text=%F0%93%82%80%F0%93%86%A3%F0%93%8B%B9%F0%93%87%BC%F0%93%8F%9E%F0%93%8B%9E%F0%93%8A%BD%F0%93%89%B4%F0%93%86%84%F0%93%8F%9B%F0%93%82%8B%F0%93%85%93%F0%93%87%93%F0%93%8F%8F%F0%93%86%A4%F0%93%8E%9F%F0%93%87%BE%F0%93%8F%99%F0%93%8C%80%F0%93%85%AD%F0%93%87%B3%F0%93%8D%91%F0%93%8B%B4%F0%93%85%83%F0%93%86%97&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/v3.css?v=24">
+<link rel="stylesheet" href="assets/egypt.css?v=8">
 </head>
 <body>
 <canvas id="bgfx" aria-hidden="true"></canvas><div class="bg-glow a" aria-hidden="true"></div><div class="bg-glow b" aria-hidden="true"></div>
@@ -28,7 +30,7 @@
 <header class="nav">
   <div class="progress" id="progress" aria-hidden="true"></div>
   <div class="wrap">
-    <a class="brand" href="#top"><span class="dot">OE</span>Omar Einshouka</a>
+    <a class="brand" href="#top" aria-label="Shoka, back to top"><span class="dot">OE</span>Shoka</a>
     <nav id="menu">
       <a href="#education">Education</a>
       <a href="#awards">Awards</a>
@@ -50,11 +52,11 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="eyebrow"><i></i>Cairo, Egypt · open to opportunities</span>
+      <span class="eyebrow"><i></i>Cairo, Egypt <span class="flag-eg" role="img" aria-label="Flag of Egypt"></span> · open to opportunities</span>
       <p class="whoami"><b>$</b> whoami</p>
       <h1>Omar Ehab<br><span>Einshouka</span></h1>
       <p class="role">I'm a <span class="typed" id="typed">Cybersecurity Engineer</span><span class="caret"></span></p>
-      <p class="lede">Cybersecurity engineer and CTF player obsessed with turning anything into clear diagrams, passionate about offensive security, breaking systems, learning new technologies, and uncovering their flaws. Active on Hack The Box, with a competitive programming background. Driven to build things that serve humanity.</p>
+      <p class="lede">Cybersecurity engineer working hands-on in application security, and a CTF player obsessed with turning anything into clear diagrams. Passionate about offensive security, breaking systems, learning new technologies, and uncovering their flaws. Active on Hack The Box, with a competitive programming background. Driven to build things that serve humanity.</p>
       <div class="cta">
         <a class="btn primary" href="#experience">./see-my-work
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -64,6 +66,9 @@
       </div>
       <div class="socials" id="socials"></div>
     </div>
+    <figure class="legend">
+      <img src="assets/anubis.svg" width="220" height="220" alt="Anubis, the jackal-headed guardian of ancient Egypt">
+    </figure>
   </div>
 </section>
 
@@ -411,7 +416,7 @@
 
 </main>
 
-<footer><div class="wrap"><span>© <span id="yr"></span> Omar Ehab Einshouka</span></div></footer>
+<footer><div class="wrap"><span>© <span id="yr"></span> Omar Ehab Einshouka · Egypt <span class="flag-eg" role="img" aria-label="Flag of Egypt"></span></span></div></footer>
 
 <a class="totop" id="totop" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 <div class="lb" id="lb"><img alt=""></div>
@@ -575,6 +580,14 @@ document.querySelectorAll('dialog.pd').forEach(d => {
   const mouse = { x: -9999, y: -9999 };
   const LINK = 148;
   const packets = [];
+  /* colours and node shape come from the theme (assets/egypt.css) */
+  const FX = {};
+  function readFx() {
+    const s = getComputedStyle(document.documentElement), v = (k, d) => (s.getPropertyValue(k) || '').trim() || d;
+    FX.c = v('--fx-rgb', '88,166,255'); FX.h = v('--fx-hi-rgb', '121,184,255'); FX.p = v('--fx-pk-rgb', '160,205,255');
+    FX.star = v('--fx-star', '0') === '1'; FX.a = parseFloat(v('--fx-alpha', '1')) || 1;
+  }
+  readFx();
   function size() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = innerWidth; H = innerHeight;
@@ -601,26 +614,32 @@ document.querySelectorAll('dialog.pd').forEach(d => {
       for (let j = i + 1; j < nodes.length; j++) {
         const b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
         if (d < LINK) {
-          ctx.strokeStyle = `rgba(88,166,255,${(1 - d / LINK) * .2})`;
+          ctx.strokeStyle = `rgba(${FX.c},${(1 - d / LINK) * .2 * FX.a})`;
           if (!still && Math.random() < .0002 && packets.length < 5) packets.push({ a, b, t: 0 });
           ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
         }
       }
       const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
       if (md < 190) {
-        ctx.strokeStyle = `rgba(121,184,255,${(1 - md / 190) * .4})`;
+        ctx.strokeStyle = `rgba(${FX.h},${(1 - md / 190) * .4 * FX.a})`;
         ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
       }
       a.ph += .03; const glow = .5 + Math.sin(a.ph) * .12;
-      ctx.fillStyle = `rgba(121,184,255,${glow})`;
-      ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = `rgba(${FX.h},${glow * FX.a})`;
+      ctx.beginPath();
+      if (FX.star) {
+        const R = a.r * 2.7, r2 = R * .4;
+        for (let k = 0; k < 10; k++) { const rr = k % 2 ? r2 : R, an = -Math.PI / 2 + k * Math.PI / 5; ctx.lineTo(a.x + Math.cos(an) * rr, a.y + Math.sin(an) * rr); }
+        ctx.closePath();
+      } else ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
+      ctx.fill();
     }
     for (let i = packets.length - 1; i >= 0; i--) {
       const k = packets[i]; k.t += .02;
       if (k.t >= 1 || Math.hypot(k.a.x - k.b.x, k.a.y - k.b.y) > LINK) { packets.splice(i, 1); continue; }
       const x = k.a.x + (k.b.x - k.a.x) * k.t, y = k.a.y + (k.b.y - k.a.y) * k.t;
-      ctx.fillStyle = 'rgba(160,205,255,.7)';
-      ctx.shadowColor = 'rgba(88,166,255,.6)'; ctx.shadowBlur = 5;
+      ctx.fillStyle = `rgba(${FX.p},.7)`;
+      ctx.shadowColor = `rgba(${FX.c},.6)`; ctx.shadowBlur = 5;
       ctx.beginPath(); ctx.arc(x, y, 1.7, 0, Math.PI * 2); ctx.fill();
       ctx.shadowBlur = 0;
     }

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e19">
+  <meta name="description" content="Articles by Omar Ehab Einshouka on software, security and the systems he builds.">
+  <title>Stories in the Stars · Shoka Journal</title>
+  <link rel="icon" href="../assets/eye-of-horus.svg">
+  <link rel="stylesheet" href="../assets/journal.css">
+  <link rel="stylesheet" href="../assets/site-nav.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../"><img src="../assets/eye-of-horus.svg" width="28" height="28" alt="">Portfolio</a>
+      <a href="./" aria-current="page">Blog</a>
+    </nav>
+  </header>
+  <main>
+    <section class="observatory" aria-labelledby="archive-name">
+      <div class="sky-backdrop">
+        <picture>
+        <source media="(max-width: 720px) and (orientation: portrait)" srcset="../assets/blog/observatory-phone.webp" width="852" height="1846">
+        <img class="archive-art" src="../assets/blog/alexandria-observatory.webp" width="1672" height="941" alt="A bronze telescope and papyrus shelves overlook a star chart in a moonlit Egyptian library." fetchpriority="high">
+      </picture>
+      </div>
+      <div class="archive-caption">
+        <p class="label">Shoka Journal</p>
+        <h1 id="archive-name">Stories in the <em>Stars</em></h1>
+        <p>Choose a star to discover its story.</p>
+        <noscript><a href="https://medium.com/@omareinshouka2001/three-sales-agents-one-client-de41947702f7">Read Three Sales Agents, One Client on Medium ↗</a></noscript>
+      </div>
+      <svg class="chart-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path class="links"/></svg>
+      <nav class="project-stars" aria-label="Article stars"></nav>
+      <nav class="constellation-picker" aria-label="Browse constellations" hidden>
+        <button class="previous" type="button" aria-label="Previous constellation">‹</button>
+        <select aria-label="Choose a constellation by topic"></select>
+        <button class="next" type="button" aria-label="Next constellation">›</button>
+      </nav>
+      <dialog id="reading-scroll" class="reading-scroll" aria-labelledby="scroll-title" aria-describedby="scroll-summary">
+        <button type="button" aria-label="Close scroll and return to the selected star">×</button>
+        <p class="scroll-source">Shoka Journal</p><h2 id="scroll-title"></h2><p class="scroll-summary" id="scroll-summary"></p>
+        <a class="read" target="_blank" rel="noopener">Read on Medium ↗</a>
+      </dialog>
+    </section>
+  </main>
+  <script type="module" src="./archive.js"></script>
+</body>
+</html>

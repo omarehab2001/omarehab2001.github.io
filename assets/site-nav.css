@@ -1,0 +1,26 @@
+.site-header {
+  position: sticky; top: 0; z-index: 30;
+  background: #080e19f5; border-bottom: 1px solid #334052;
+}
+.site-nav {
+  width: min(100%, 1240px); box-sizing: border-box; margin: auto;
+  padding-inline: clamp(16px,4vw,60px); display: flex; align-items: stretch; gap: 8px;
+}
+.site-nav a {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 56px; padding-inline: 14px; box-sizing: border-box;
+  color: #e4e9ec; font: 600 16px/1.3 "Segoe UI", Arial, sans-serif;
+  text-decoration: none; border-bottom: 2px solid transparent;
+}
+.site-nav a[aria-current] { color: #f0cb90; border-bottom-color: currentColor; }
+.site-nav a:hover { background: #172332; color: #ffdda5; }
+.site-nav a:focus-visible { outline: 2px solid #edc68b; outline-offset: -4px; }
+.shoka-signature {
+  margin-inline-start: auto;
+  display: inline-flex; align-items: center; gap: 8px;
+  color: #f0cb90; font: italic 600 23px/1 Georgia, serif;
+}
+@media (max-width:380px) {
+  .site-nav { padding-inline: 10px; gap: 4px; }
+  .site-nav a { padding-inline: 9px; }
+}

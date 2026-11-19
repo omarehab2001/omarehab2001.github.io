@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080e19">
+  <meta name="description" content="Inside a real estate CRM where every agent plays to win, and only the admin sees the whole game.">
+  <title>Three Sales Agents, One Client · Shoka Journal</title>
+  <link rel="canonical" href="https://medium.com/@omareinshouka2001/three-sales-agents-one-client-de41947702f7">
+  <link rel="icon" href="../assets/eye-of-horus.svg">
+  <link rel="stylesheet" href="../assets/journal.css">
+  <link rel="stylesheet" href="../assets/site-nav.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="../"><img src="../assets/eye-of-horus.svg" width="28" height="28" alt="">Portfolio</a>
+      <a href="./" aria-current="location">Blog</a>
+    </nav>
+  </header>
+  <div class="journal-sky" aria-hidden="true"></div>
+  <div class="sheet">
+    <main>
+      <article>
+        <header class="article-head">
+          <p class="meta">Software engineering</p>
+          <h1>Three Sales Agents, One Client</h1>
+          <p class="dek">Inside a real estate CRM where every agent plays to win, and only the admin sees the whole game.</p>
+          <p class="byline">Omar Einshouka · <time datetime="2026-10-11">11 October 2026</time></p>
+        </header>
+        <div class="prose">
+          <figure><img alt="Contents of the article, from CRM basics through system architecture." height="614" loading="lazy" src="../assets/blog/crm/cover.webp" width="1024"/></figure>
+          <h2>1. What is a CRM, and why does real estate need one?</h2>
+          <p>A CRM (customer relationship management system) is the one place where a company keeps everything about its clients: who they are, what they’re looking for, where they came from, and every call, message and meeting since the first contact. In most real estate offices I’ve seen, that information is spread across WhatsApp chats and spreadsheets, and leads get lost somewhere in between.</p>
+          <p>A good CRM makes the daily work lighter for everyone. Marketing can see that its leads actually reached sales. Sales agents know who to call next and don’t forget what they promised. Managers can see the whole pipeline without chasing people for updates, and they can tell which sources and which people are bringing in contracts.</p>
+          <h2>2. Where most CRMs fall short</h2>
+          <p>In real estate, a good lead rarely belongs to one sales agent. One makes the first call, another sends the payment plan, a third books the site visit. Many of the CRMs we tried have a single status per lead, so every update erases the one before it, and the manager is left guessing who did what.</p>
+          <p>Over the past few months I worked on a CRM for a real estate startup that wants to grow in a crowded market. We kept coming back to one idea: let many sales agents work the same lead, each with their own actions and their own feedback, and let the admin follow the progress of each sales agent on every lead.</p>
+          <h2>3. What makes it different</h2>
+          <p>Our signature is that several sales agents can work the same lead while the admin watches the competition how each of them is doing on it and control every thing smoothly. Around that, every role gets what it needs and nothing more.</p>
+          <ul><li>Marketing always knows where its leads stand, and gets a notification when one is assigned or moves.</li><li>Every sales agent has a diary and reminders, so promises don’t slip.</li><li>The admin sees and traces everything: each agent’s progress on every lead, everyone’s performance, and the full history of every lead.</li><li>It works on the phone. One tap to call or WhatsApp a client.</li><li>It’s built so it can grow into a SaaS, with many companies on one platform.</li></ul>
+          <h2>4. How a lead moves</h2>
+          <figure><img alt="How a lead moves, one row per role." height="628" loading="lazy" src="../assets/blog/crm/lead-flow.webp" width="1024"/><figcaption>How a lead moves, one row per role.</figcaption></figure>
+          <p>A lead comes in from a campaign, an import or a walk-in. The CRM checks the phone number first, so the same client doesn’t get called twice by mistake. A manager then hands the lead to one sales agent or several. They call, message and log what happened, and each log moves the lead along an eleven-step ladder, from New to Contract signed.</p>
+          <h2 id="pipeline">5. The pipeline feedback</h2>
+          <p>Every buyer sounds different on the first call, but when we studied how clients behave, the same moments kept coming back. Some don’t pick up, some ask for a call back, some want a site visit, and some sign. So we turned every one of those moments into a progress pipeline. After any call, message or note, the sales agent just picks where the client stands now.</p>
+          <figure><img alt="The eleven stages of feedback in the sales pipeline." height="384" loading="lazy" src="../assets/blog/crm/pipeline.webp" width="1024"/></figure>
+          <h2>6. The marketing journey</h2>
+          <p>Marketing brings the leads in and then follows them all the way through. Here’s what that looks like in four steps.</p>
+          <figure><img alt="Marketing adds a lead in one form. If the phone number is already on a live lead, the CRM stops it before it turns into a duplicate." height="690" loading="lazy" src="../assets/blog/crm/add-lead.webp" width="1024"/><figcaption>Marketing adds a lead in one form. If the phone number is already on a live lead, the CRM stops it before it turns into a duplicate.</figcaption></figure>
+          <figure><img alt="The leads table shows every lead they brought in, at the furthest step any sales agent has reached." height="412" loading="lazy" src="../assets/blog/crm/marketing-leads.webp" width="1024"/><figcaption>The leads table shows every lead they brought in, at the furthest step any sales agent has reached.</figcaption></figure>
+          <figure><img alt="They get a notification whenever one of their leads is assigned to sales or moves forward." height="603" loading="lazy" src="../assets/blog/crm/marketing-notifications.webp" width="1024"/><figcaption>They get a notification whenever one of their leads is assigned to sales or moves forward.</figcaption></figure>
+          <figure><img alt="Opening a lead shows everything about it, including how far it has got. What it doesn’t show is which sales agent is working it." height="734" loading="lazy" src="../assets/blog/crm/marketing-detail.webp" width="1024"/><figcaption>Opening a lead shows everything about it, including how far it has got. What it doesn’t show is which sales agent is working it.</figcaption></figure>
+          <h2>7. The sales journey</h2>
+          <p>A sales agent works their own leads, logs what happens, and lets the diary remember the rest. They can’t see which marketing agent brought a lead in, or that a colleague might be working the same client. As far as each agent is concerned, the lead is theirs to win. That keeps the team competitive, and it keeps client details on a need-to-know basis.</p>
+          <figure><img alt="Each sales agent only sees their own leads, at the step they personally reached." height="365" loading="lazy" src="../assets/blog/crm/sales-leads.webp" width="1024"/><figcaption>Each sales agent only sees their own leads, at the step they personally reached.</figcaption></figure>
+          <figure><img alt="Logging a call, message or note takes a few seconds. If the agent promises a call-back or a follow-up, it goes straight into the diary." height="690" loading="lazy" src="../assets/blog/crm/call-log.webp" width="1024"/><figcaption>Logging a call, message or note takes a few seconds. If the agent promises a call-back or a follow-up, it goes straight into the diary.</figcaption></figure>
+          <figure><img alt="The dashboard opens on what’s due now, with the month’s diary next to it: every call-back, follow-up, meeting and site visit the agent has promised." height="639" loading="lazy" src="../assets/blog/crm/sales-diary.webp" width="1024"/><figcaption>The dashboard opens on what’s due now, with the month’s diary next to it: every call-back, follow-up, meeting and site visit the agent has promised.</figcaption></figure>
+          <figure><img alt="A reminder arrives when a call-back, follow-up or meeting is due, and again if it slips." height="603" loading="lazy" src="../assets/blog/crm/sales-reminders.webp" width="1024"/><figcaption>A reminder arrives when a call-back, follow-up or meeting is due, and again if it slips.</figcaption></figure>
+          <h2>8. The admin journey: our signature</h2>
+          <p>This is the part of the system I care about most.</p>
+          <p>In real estate it’s normal for a hot lead to pass through more than one agent, and most tools make you pick a single owner. Here the admin can put several sales agents on the same lead on purpose. Each one works it in their own way and logs their own feedback, and none of them can see the others. The admin is the only one who sees the whole picture: who is still trying to reach the client, who is following up, and who has already taken them to see the site.</p>
+          <blockquote><em>It’s a quiet competition between agents, and the admin has the only seat with a full view.</em></blockquote>
+          <p>That view is what we consider our signature in the market. I haven’t come across another real estate CRM that works this way. Here’s how the admin’s day looks, in seven steps.</p>
+          <figure><img alt="The dashboard: where every lead stands, which leads nobody has picked up yet, what was signed, each sales agent’s workload and every meeting this month." height="623" loading="lazy" src="../assets/blog/crm/admin-dashboard.webp" width="1024"/><figcaption>The dashboard: where every lead stands, which leads nobody has picked up yet, what was signed, each sales agent’s workload and every meeting this month.</figcaption></figure>
+          <figure><img alt="One lead can go to several sales agents at once, and each of them keeps their own private pipeline on it." height="603" loading="lazy" src="../assets/blog/crm/assign-agents.webp" width="1024"/><figcaption>One lead can go to several sales agents at once, and each of them keeps their own private pipeline on it.</figcaption></figure>
+          <p>Take Noha, a client looking for a duplex in Marassi with a budget of four million. Three sales agents are working her lead, and the admin can see exactly where each of them is.</p>
+          <figure><img alt="Noha’s pipeline: Youssef still can’t reach her, Sara is following up on the payment plan, and Mona has already done the site visit." height="295" loading="lazy" src="../assets/blog/crm/agent-progress.webp" width="1024"/><figcaption>Noha’s pipeline: Youssef still can’t reach her, Sara is following up on the payment plan, and Mona has already done the site visit.</figcaption></figure>
+          <figure><img alt="The Ownership tab lists every agent on the lead with their own feedback, side by side. Only the admin sees this; team leaders see the same for their own team." height="647" loading="lazy" src="../assets/blog/crm/ownership.webp" width="1024"/><figcaption>The Ownership tab lists every agent on the lead with their own feedback, side by side. Only the admin sees this; team leaders see the same for their own team.</figcaption></figure>
+          <p>From here the next move is obvious. Mona takes the lead, Sara backs her up on the numbers, and Youssef can move on to fresh leads. When one of them signs the contract, the others’ work on that lead closes automatically, so a sold unit never stays open on someone else’s list.</p>
+          <p>The admin can also trace everything, from each agent’s numbers down to a single edit on a single lead.</p>
+          <figure><img alt="Sales Performance shows leads, contracts, win rate and response time for every sales agent." height="690" loading="lazy" src="../assets/blog/crm/performance.webp" width="1024"/><figcaption>Sales Performance shows leads, contracts, win rate and response time for every sales agent.</figcaption></figure>
+          <figure><img alt="Every lead has an Audit tab with each assignment, action and edit, who did it and when. Nobody can change it." height="690" loading="lazy" src="../assets/blog/crm/audit.webp" width="1024"/><figcaption>Every lead has an Audit tab with each assignment, action and edit, who did it and when. Nobody can change it.</figcaption></figure>
+          <figure><img alt="The admin creates accounts, gives each person a role and a team, sees who’s online, and can deactivate an account or reset a password. The role decides what each person is allowed to see." height="550" loading="lazy" src="../assets/blog/crm/accounts.webp" width="1024"/><figcaption>The admin creates accounts, gives each person a role and a team, sees who’s online, and can deactivate an account or reset a password. The role decides what each person is allowed to see.</figcaption></figure>
+          <h2>9. On the phone</h2>
+          <p>Every screen works on a phone. Tap a number and it asks “Call or WhatsApp?”, and the agent can log what happened before they’ve even put the phone down.</p>
+          <figure><img alt="On the phone: calling or messaging a client, and logging the result." height="768" loading="lazy" src="../assets/blog/crm/mobile.webp" width="1024"/><figcaption>On the phone: calling or messaging a client, and logging the result.</figcaption></figure>
+          <h2 id="architecture">10. The architecture of the CRM system</h2>
+          <figure><img alt="The architecture of the CRM system." height="717" loading="lazy" src="../assets/blog/crm/architecture.webp" width="1024"/><figcaption>The architecture of the CRM system.</figcaption></figure>
+          <p>Under the hood it’s one program on one server, talking to one database file. Every request goes through six checks before it touches any data, including who you are and what your role is allowed to see. The screens check for changes every few seconds, so a manager’s dashboard stays up to date without reloading. It’s built with Node.js, Express, SQLite and plain JavaScript.</p>
+          <p>Seeing every lead, every agent and every step in one place is a simple idea, but it’s the part of this project I’m proudest of.</p>
+          <p>If your team shares leads between agents, I’d really like to hear how you handle it.</p>
+          <p><em>Written by Omar Einshouka.</em></p>
+        </div>
+      </article>
+    </main>
+    <footer class="article-footer"><a class="read" href="./">← All articles</a><a class="read" href="https://medium.com/@omareinshouka2001/three-sales-agents-one-client-de41947702f7">Original on Medium ↗</a></footer>
+  </div>
+</body>
+</html>

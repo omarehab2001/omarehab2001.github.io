@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Omar Einshouka · Portfolio</title>
-<meta name="description" content="Omar Ehab Einshouka, cybersecurity engineer and technical lead. Offensive security, CTFs, and the full digital ecosystem of a real estate startup.">
+<meta name="description" content="Omar Ehab Einshouka, cybersecurity engineer and CTF player focused on web and mobile application security.">
 <meta property="og:title" content="Omar Ehab Einshouka · Cybersecurity Engineer">
-<meta property="og:description" content="Cybersecurity engineer, CTF player and technical lead. Offensive security and the full digital ecosystem of a real estate startup.">
+<meta property="og:description" content="Omar Ehab Einshouka, cybersecurity engineer and CTF player focused on web and mobile application security.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://omarehab2001.github.io/">
 <meta property="og:image" content="https://omarehab2001.github.io/assets/og-landing.jpg">
@@ -15,67 +15,63 @@
 <meta property="og:image:alt" content="The landing page of Omar Ehab Einshouka's portfolio">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://omarehab2001.github.io/assets/og-landing.jpg">
-<meta name="theme-color" content="#020202">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23020202'/%3E%3Cg fill='none' stroke='%23D9B544' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19Q30 7 56 19'/%3E%3Cpath d='M9 31Q30 16 52 29Q30 42 9 31z'/%3E%3Cpath d='M52 29l8-2'/%3E%3Cpath d='M27 40l-2 16'/%3E%3Cpath d='M36 39q5 15 18 10'/%3E%3C/g%3E%3Ccircle cx='30' cy='29.5' r='6' fill='%23D9B544'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Cinzel:wght@500;600;700;800&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Egyptian+Hieroglyphs&text=%F0%93%82%80%F0%93%86%A3%F0%93%8B%B9%F0%93%87%BC%F0%93%8F%9E%F0%93%8B%9E%F0%93%8A%BD%F0%93%89%B4%F0%93%86%84%F0%93%8F%9B%F0%93%82%8B%F0%93%85%93%F0%93%87%93%F0%93%8F%8F%F0%93%86%A4%F0%93%8E%9F%F0%93%87%BE%F0%93%8F%99%F0%93%8C%80%F0%93%85%AD%F0%93%87%B3%F0%93%8D%91%F0%93%8B%B4%F0%93%85%83%F0%93%86%97&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#080e19">
+<link rel="icon" href="assets/eye-of-horus.svg">
 <link rel="stylesheet" href="assets/v3.css?v=24">
-<link rel="stylesheet" href="assets/egypt.css?v=8">
+<link rel="stylesheet" href="assets/museum.css">
+<link rel="stylesheet" href="assets/site-nav.css">
 </head>
-<body>
-<canvas id="bgfx" aria-hidden="true"></canvas><div class="bg-glow a" aria-hidden="true"></div><div class="bg-glow b" aria-hidden="true"></div>
+<body id="top">
 
-<header class="nav">
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="#top" aria-current="page">Portfolio</a>
+    <a href="blog/">Blog</a>
+    <span class="shoka-signature"><img src="assets/eye-of-horus.svg" width="28" height="28" alt="">Shoka</span>
+  </nav>
   <div class="progress" id="progress" aria-hidden="true"></div>
-  <div class="wrap">
-    <a class="brand" href="#top" aria-label="Shoka, back to top"><span class="dot">OE</span>Shoka</a>
-    <nav id="menu">
-      <a href="#education">Education</a>
-      <a href="#awards">Awards</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#certs">Certificates</a>
-      <a href="#skills">Skills</a>
-      <a href="#writing">Articles</a>
-      <a href="#contact">Contact</a>
-      <a href="#message">Message</a>
-    </nav>
-    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-  </div>
 </header>
 
-<main id="top">
+<main>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow"><i></i>Cairo, Egypt <span class="flag-eg" role="img" aria-label="Flag of Egypt"></span> · open to opportunities</span>
-      <p class="whoami"><b>$</b> whoami</p>
-      <h1>Omar Ehab<br><span>Einshouka</span></h1>
-      <p class="role">I'm a <span class="typed" id="typed">Cybersecurity Engineer</span><span class="caret"></span></p>
-      <p class="lede">Cybersecurity engineer working hands-on in application security, and a CTF player obsessed with turning anything into clear diagrams. Passionate about offensive security, breaking systems, learning new technologies, and uncovering their flaws. Active on Hack The Box, with a competitive programming background. Driven to build things that serve humanity.</p>
-      <div class="cta">
-        <a class="btn primary" href="#experience">./see-my-work
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn" href="assets/Omar_Einshouka_CV.pdf" download>cv.pdf</a>
-        <a class="btn" href="#contact">./contact</a>
-        <a class="btn" href="#writing">./articles</a>
+<div class="opening">
+  <div class="night-scene">
+    <picture>
+      <source media="(max-width:720px) and (orientation:portrait)" srcset="assets/temple-night-portrait.webp" width="941" height="1672">
+      <img src="assets/temple-night.webp" width="1672" height="941" fetchpriority="high" alt="Moonlit pyramids above a torchlit Egyptian temple on the Nile beneath the Milky Way.">
+    </picture>
+    <div class="star-dust" aria-hidden="true"></div>
+    <div class="temple-glow" aria-hidden="true"></div>
+    <svg class="constellation" viewBox="0 0 140 75" fill="none" aria-hidden="true">
+      <path pathLength="1" d="M5 50 31 26 62 34 93 10 127 19"/>
+      <g fill="currentColor"><circle cx="5" cy="50" r="2"/><circle cx="31" cy="26" r="2"/><circle cx="62" cy="34" r="2.6"/><circle cx="93" cy="10" r="2"/><circle cx="127" cy="19" r="1.7"/></g>
+    </svg>
+    <div class="night-sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><span></span><span></span></div>
+    <div class="embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+<section class="hero" aria-label="Introduction">
+  <div class="wrap hero-layout">
+    <div class="identity">
+      <div class="intro-copy">
+      <p class="locator">Cairo, Egypt <span aria-hidden="true">/</span> Open to opportunities</p>
+      <h1>Omar Ehab<br><em>Einshouka</em></h1>
+      <p class="role">Cybersecurity Engineer</p>
+      <div class="cta"><a class="btn primary" href="#bio">Read my biography ↓</a><a class="btn" href="assets/Omar_Einshouka_CV.pdf" download>Download CV</a></div>
       </div>
-      <div class="socials" id="socials"></div>
     </div>
-    <figure class="legend">
-      <img src="assets/anubis.svg" width="220" height="220" alt="Anubis, the jackal-headed guardian of ancient Egypt">
-    </figure>
+
   </div>
 </section>
-
+<section id="bio" class="biography">
+  <div class="wrap bio-layout"><div><p class="kicker">About me</p><h2>Biography</h2></div><div><p class="lede">A cybersecurity engineer and CTF player with hands-on experience in application security. I’m passionate about web and mobile application security, learning new technologies, and uncovering their flaws. Active on Hack The Box, with a competitive programming background. Driven to secure things that serve humanity.</p><div class="socials" id="socials"></div></div></div>
+</section>
+</div>
 <!-- EDUCATION -->
 <section id="education" class="mini">
   <div class="wrap">
-    <p class="kicker reveal">$ cat education.txt</p>
+    <p class="kicker reveal">Education</p>
     <ul class="edu-list reveal">
       <li><span class="when">Apr 2025 – Jun 2026</span><span><b>Military service</b> · taught me discipline, responsibility, and how to handle hard situations</span></li>
       <li><span class="when">Sep 2019 – Jul 2024</span><span><b>B.Sc. in Cybersecurity &amp; Data Analytics</b> · Faculty of Electronic Engineering, Menoufia University</span></li>
@@ -86,13 +82,13 @@
 <!-- AWARDS + CP -->
 <section id="awards">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ cat awards.txt</p><h2>Competitions and competitive programming</h2></div></div>
+    <div class="sec-head reveal"><div><p class="kicker">Honours</p><h2>Competitions and competitive programming</h2></div></div>
     <div class="grid3">
       <a class="award reveal" href="https://www.linkedin.com/posts/omar-ehab-einshouka-82a65b195_cybersecurity-egypt-pentesting-activity-7172757532589985792-3PzE" target="_blank" rel="noopener"><div class="place">3<sup>rd</sup></div><b>Cyber Champions CTF</b><span>Organised by Zinad IT &amp; ITI</span><em class="go">See the LinkedIn post ↗</em></a>
       <a class="award reveal" href="https://drive.google.com/file/d/1sFyQ6HwcITICQIUX1EIGHNoRpF62ttEi/view" target="_blank" rel="noopener"><div class="place">7<sup>th</sup></div><b>ICMTC CTF Finals</b><span>Capture the Flag finals</span><em class="go">View the certificate ↗</em></a>
       <a class="award reveal" href="https://drive.google.com/file/d/1W6qz6h4YaBPFhdfn_B1UsZ8LJWdI_4R6/view" target="_blank" rel="noopener"><div class="place">9<sup>th</sup></div><b>Menoufia University Collegiate Programming Contest</b><span>ICPC</span><em class="go">View the certificate ↗</em></a>
     </div>
-    <h3 class="sub-h reveal">competitive-programming.txt</h3>
+    <h3 class="sub-h reveal">Competitive programming</h3>
     <div class="cp">
       <div class="cp-card reveal"><b class="num">400+</b><span>algorithm problems solved on <a href="https://codeforces.com/profile/Omar_Ehab" target="_blank" rel="noopener">Codeforces</a>, <a href="https://vjudge.net/user/omar_zoo" target="_blank" rel="noopener">VJudge</a> and <a href="https://judge.beecrowd.com/en/profile/412774" target="_blank" rel="noopener">beecrowd</a></span></div>
       <div class="cp-card reveal"><b class="num">500+</b><span>students taught problem solving and algorithms in C++, online and onsite, with the IEEE Student Branch</span></div>
@@ -104,7 +100,7 @@
 <!-- EXPERIENCE -->
 <section id="experience" class="band">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ cat experience.log</p><h2>Where I've worked and trained</h2></div></div>
+    <div class="sec-head reveal"><div><p class="kicker">Experience</p><h2>Where I've worked and trained</h2></div></div>
     <div class="tl">
       <div class="tl-item reveal"><div class="tl-card">
         <div class="tl-top"><h3>Technical Lead</h3><span class="when">Oct 2025 – Sep 2026</span></div>
@@ -159,7 +155,7 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ ls ~/projects/</p><h2>Projects</h2></div><p>Select a project to see the details.</p></div>
+    <div class="sec-head reveal"><div><p class="kicker">Project catalogue</p><h2>Projects</h2></div><p>Select a project to see the details.</p></div>
     <p class="swipe-hint" aria-hidden="true">Swipe to see more projects <span>→</span></p>
     <div class="pgrid">
       <button class="pcard reveal" type="button" data-open="pd-cybervault">
@@ -207,7 +203,7 @@
       <a href="assets/crm/architecture.jpg" target="_blank" rel="noopener"><img src="assets/crm/architecture.jpg" alt="The architecture of the CRM: one program on one server with one database file, six checks on every request" loading="lazy"></a>
       <figcaption>One program on one server, talking to one database file. Every request passes six checks, including who you are and what your role may see, before it touches any data.</figcaption>
     </figure>
-    <div class="plinks"><a class="btn primary" href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">Read the article on Medium</a></div>
+    <div class="plinks"><a class="btn primary" href="blog/three-sales-agents-one-client.html">Read the article</a></div>
   </div>
 </dialog>
 
@@ -325,7 +321,7 @@
 <!-- CERTIFICATES -->
 <section id="certs" class="band">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ ls certificates/</p><h2>Credentials and certificates</h2></div><p>Select a certificate to open it.</p></div>
+    <div class="sec-head reveal"><div><p class="kicker">Qualifications</p><h2>Credentials and certificates</h2></div><p>Select a certificate to open it.</p></div>
     <div class="cert-main reveal">
       <span class="seal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m9 14.5-1.5 7L12 19l4.5 2.5-1.5-7"/><path d="m9.5 9 1.8 1.8L14.8 7.5"/></svg></span>
       <div>
@@ -352,7 +348,7 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ cat skills.txt</p><h2>What I work with</h2></div></div>
+    <div class="sec-head reveal"><div><p class="kicker">Skills</p><h2>What I work with</h2></div></div>
     <div class="skills">
       <div class="skill reveal"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Security</h3>
         <div class="chips"><span>Web &amp; API pentesting</span><span>AWS cloud pentesting</span><span>Basic network pentesting</span><span>Vulnerability assessment</span><span>Exploitation</span><span>CVSS scoring</span><span>Red teaming</span><span>OSINT</span><span>Threat modelling</span><span>Secure code review</span><span>CVE research</span><span>Physical attacks</span><span>Scripting</span><span>Incident handling</span><span>SIEM</span></div></div>
@@ -366,24 +362,11 @@
   </div>
 </section>
 
-<!-- WRITING -->
-<section id="writing" class="band">
-  <div class="wrap">
-    <div class="sec-head reveal"><div><p class="kicker">$ ls articles/</p><h2>Articles</h2></div><p><a href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">Click here</a> to see more write-ups and articles on Medium.</p></div>
-    <div class="agrid">
-      <a class="acard reveal" href="https://medium.com/@omareinshouka2001" target="_blank" rel="noopener">
-        <span class="aimg"><img src="assets/01b-the-pipeline-feedback.jpg" alt="The CRM's eleven-step pipeline feedback" loading="lazy"></span>
-        <span class="abody"><span class="tagx info">MEDIUM · CRM</span><b>Three Sales Agents, One Client</b><span class="adesc">How a real estate CRM lets a whole sales team work the same lead, and why the admin's view of it matters most.</span><span class="go">Read on Medium ↗</span></span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
     <div class="contact reveal">
-      <p class="kicker">$ ./contact.sh</p>
+      <p class="kicker">Contact</p>
       <h2>Let's build something secure.</h2>
       <p>I'm open to roles in offensive security, penetration testing, and security-minded engineering. The best way to reach me is email or LinkedIn.</p>
       <div class="cta" id="contactLinks"></div>
@@ -396,7 +379,7 @@
   <div class="wrap">
     <div class="msg reveal">
       <div class="msg-intro">
-        <p class="kicker">$ echo "…" | anon</p>
+        <p class="kicker">Correspondence</p>
         <h2>Leave an anonymous message</h2>
         <p>Feedback, a question, or a thought you'd rather not sign. The form doesn't ask for your name or email, and only I read what you send.</p>
       </div>
@@ -406,7 +389,7 @@
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="msg-row">
           <span class="count" id="anonCount">0 / 2000</span>
-          <button class="btn primary" type="submit" id="anonSend">./send-anonymously</button>
+          <button class="btn primary" type="submit" id="anonSend">Send anonymously</button>
         </div>
         <p class="msg-status" id="anonStatus" role="status" aria-live="polite"></p>
       </form>
@@ -486,25 +469,14 @@ document.querySelectorAll('[data-links]').forEach(el=>{
 
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-/* typed role */
-const roles = ['Cybersecurity Engineer','Penetration Tester','CTF Player'];
-const t = document.getElementById('typed');
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  let r = 0, c = roles[0].length, del = true;
-  setTimeout(function tick(){
-    const w = roles[r];
-    if (del) { c--; if (c === 0) { del = false; r = (r+1) % roles.length; } }
-    else { c++; if (c === roles[r].length) { del = true; t.textContent = roles[r]; return setTimeout(tick, 2200); } }
-    t.textContent = roles[r].slice(0, c);
-    setTimeout(tick, del ? 35 : 70);
-  }, 2400);
-}
-
-/* mobile menu */
-const menu = document.getElementById('menu');
-document.getElementById('menuBtn').onclick = () => menu.classList.toggle('open');
-menu.querySelectorAll('a').forEach(x => x.onclick = () => menu.classList.remove('open'));
-
+const hero = document.querySelector('.opening');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+hero.addEventListener('pointermove', event => {
+  if (event.pointerType !== 'mouse' || reducedMotion.matches) return;
+  const bounds = hero.getBoundingClientRect();
+  hero.style.setProperty('--pan', ((event.clientX - bounds.left) / bounds.width - .5) * 20 + 'px');
+});
+hero.addEventListener('pointerleave', () => hero.style.removeProperty('--pan'));
 /* reveal on scroll */
 
 
@@ -515,18 +487,16 @@ if (!reduce && 'IntersectionObserver' in window) {
   document.querySelectorAll('.reveal').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('pre'); io2.observe(el); } });
 }
 
-/* scroll progress, back to top, and the current section in the menu */
+/* scroll progress and back to top */
 const prog = document.getElementById('progress'), toTop = document.getElementById('totop');
-const links = [...document.querySelectorAll('#menu a')];
-const secs = links.map(l => document.querySelector(l.getAttribute('href'))).filter(Boolean);
 let ticking = false;
 const onScroll = () => {
+  if (!reducedMotion.matches && scrollY <= hero.offsetHeight) {
+    hero.style.setProperty('--rise', Math.min(14, scrollY * .08) + 'px');
+  }
   const h = document.documentElement.scrollHeight - innerHeight;
   prog.style.setProperty('--p', h > 0 ? Math.min(scrollY / h, 1) : 0);
   toTop.classList.toggle('show', scrollY > innerHeight * .9);
-  let cur = null;
-  secs.forEach(sec => { if (sec.getBoundingClientRect().top < innerHeight * .35) cur = sec.id; });
-  links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + cur));
   ticking = false;
 };
 addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, {passive:true});
@@ -571,91 +541,6 @@ document.querySelectorAll('dialog.pd').forEach(d => {
   d.addEventListener('close', () => { document.body.style.overflow = ''; });
 });
 
-/* background network: drifting nodes, linked when close, reaching toward the pointer */
-(() => {
-  const cv = document.getElementById('bgfx'); if (!cv || !cv.getContext) return;
-  const ctx = cv.getContext('2d');
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let W = 0, H = 0, dpr = 1, nodes = [], raf = 0;
-  const mouse = { x: -9999, y: -9999 };
-  const LINK = 148;
-  const packets = [];
-  /* colours and node shape come from the theme (assets/egypt.css) */
-  const FX = {};
-  function readFx() {
-    const s = getComputedStyle(document.documentElement), v = (k, d) => (s.getPropertyValue(k) || '').trim() || d;
-    FX.c = v('--fx-rgb', '88,166,255'); FX.h = v('--fx-hi-rgb', '121,184,255'); FX.p = v('--fx-pk-rgb', '160,205,255');
-    FX.star = v('--fx-star', '0') === '1'; FX.a = parseFloat(v('--fx-alpha', '1')) || 1;
-  }
-  readFx();
-  function size() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-    W = innerWidth; H = innerHeight;
-    cv.width = W * dpr; cv.height = H * dpr;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const n = Math.min(92, Math.round(W * H / 18000));
-    nodes = Array.from({ length: n }, () => ({
-      x: Math.random() * W, y: Math.random() * H,
-      vx: (Math.random() - .5) * .32, vy: (Math.random() - .5) * .32,
-      r: Math.random() * 1.5 + .65, ph: Math.random() * 6.28
-    }));
-  }
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    for (const p of nodes) {
-      if (!still) {
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < -20) p.x = W + 20; if (p.x > W + 20) p.x = -20;
-        if (p.y < -20) p.y = H + 20; if (p.y > H + 20) p.y = -20;
-      }
-    }
-    for (let i = 0; i < nodes.length; i++) {
-      const a = nodes[i];
-      for (let j = i + 1; j < nodes.length; j++) {
-        const b = nodes[j], dx = a.x - b.x, dy = a.y - b.y, d = Math.hypot(dx, dy);
-        if (d < LINK) {
-          ctx.strokeStyle = `rgba(${FX.c},${(1 - d / LINK) * .2 * FX.a})`;
-          if (!still && Math.random() < .0002 && packets.length < 5) packets.push({ a, b, t: 0 });
-          ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
-        }
-      }
-      const md = Math.hypot(a.x - mouse.x, a.y - mouse.y);
-      if (md < 190) {
-        ctx.strokeStyle = `rgba(${FX.h},${(1 - md / 190) * .4 * FX.a})`;
-        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
-      }
-      a.ph += .03; const glow = .5 + Math.sin(a.ph) * .12;
-      ctx.fillStyle = `rgba(${FX.h},${glow * FX.a})`;
-      ctx.beginPath();
-      if (FX.star) {
-        const R = a.r * 2.7, r2 = R * .4;
-        for (let k = 0; k < 10; k++) { const rr = k % 2 ? r2 : R, an = -Math.PI / 2 + k * Math.PI / 5; ctx.lineTo(a.x + Math.cos(an) * rr, a.y + Math.sin(an) * rr); }
-        ctx.closePath();
-      } else ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    for (let i = packets.length - 1; i >= 0; i--) {
-      const k = packets[i]; k.t += .02;
-      if (k.t >= 1 || Math.hypot(k.a.x - k.b.x, k.a.y - k.b.y) > LINK) { packets.splice(i, 1); continue; }
-      const x = k.a.x + (k.b.x - k.a.x) * k.t, y = k.a.y + (k.b.y - k.a.y) * k.t;
-      ctx.fillStyle = `rgba(${FX.p},.7)`;
-      ctx.shadowColor = `rgba(${FX.c},.6)`; ctx.shadowBlur = 5;
-      ctx.beginPath(); ctx.arc(x, y, 1.7, 0, Math.PI * 2); ctx.fill();
-      ctx.shadowBlur = 0;
-    }
-    if (!still) raf = requestAnimationFrame(draw);
-  }
-  size(); draw();
-  addEventListener('resize', () => { cancelAnimationFrame(raf); size(); draw(); });
-  addEventListener('pointermove', e => { mouse.x = e.clientX; mouse.y = e.clientY; if (still) draw(); }, { passive: true });
-  addEventListener('pointerleave', () => { mouse.x = mouse.y = -9999; });
-  document.addEventListener('visibilitychange', () => {
-    if (still) return;
-    if (document.hidden) cancelAnimationFrame(raf); else raf = requestAnimationFrame(draw);
-  });
-})();
-
-
 /* anonymous message: sent through Web3Forms to Omar's inbox; no name or email is asked for */
 (() => {
   const ACCESS_KEY = '37a24e78-f164-4f7f-b04a-4ac0c95a3d58';   // Web3Forms access key (public by design, it can only send to Omar)
@@ -689,6 +574,6 @@ const lb = document.getElementById('lb');
 document.querySelectorAll('.project .media img, .article img').forEach(img => img.onclick = () => { lb.querySelector('img').src = img.src; lb.classList.add('open'); });
 lb.onclick = () => lb.classList.remove('open');
 </script>
-<script data-goatcounter="https://shouka.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
